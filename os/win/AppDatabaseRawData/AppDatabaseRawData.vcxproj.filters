@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App-Database-RawData">
+      <UniqueIdentifier>{453b596f-ffb7-4f0b-9a6e-ba9d01312a34}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Database\rawdata\main.cpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\rawdata\AppCmdProc.cpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\RawData\Receiver.cpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\RawData\ReceiverExtern.cpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\RawData\ReceiverDataAcq.cpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\RawData\ReceiverRawDataSaver.cpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\RawData\ReceiverExportCSV.cpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\App\Database\rawdata\AppCmdProc.hpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\App\Database\RawData\AppDefine.h">
+      <Filter>App-Database-RawData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\App\Database\RawData\Receiver.hpp">
+      <Filter>App-Database-RawData</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

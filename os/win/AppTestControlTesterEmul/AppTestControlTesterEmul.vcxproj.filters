@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App-Test-ControlTesterEmul">
+      <UniqueIdentifier>{1b6f2aa2-2b9b-409e-9c03-06c334c21cf1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Test\ControlTesterEmul\main.cpp">
+      <Filter>App-Test-ControlTesterEmul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Test\ControlTesterEmul\CmdTesterMgr.cpp">
+      <Filter>App-Test-ControlTesterEmul</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\App\Test\ControlTesterEmul\CmdTesterMgr.hpp">
+      <Filter>App-Test-ControlTesterEmul</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

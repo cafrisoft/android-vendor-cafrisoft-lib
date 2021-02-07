@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TESys">
+      <UniqueIdentifier>{c125b6ff-b2bf-45bb-acf7-56298dad8f54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESys\API">
+      <UniqueIdentifier>{33e4e36a-6067-482c-b2a0-ceb3c5580244}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\TESys\API\Define.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\Net.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\Struct.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\Base.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\DataBase.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

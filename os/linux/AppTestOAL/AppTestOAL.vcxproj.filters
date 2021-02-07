@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Test\OAL\TestSleep.cpp">
+      <Filter>App-Test-OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Test\OAL\TestTimer.cpp">
+      <Filter>App-Test-OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Test\OAL\main.cpp">
+      <Filter>App-Test-OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Test\OAL\TestLog.cpp">
+      <Filter>App-Test-OAL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="App-Test-OAL">
+      <UniqueIdentifier>{e4086539-ccad-4563-8389-5fee6ca59339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm">
+      <UniqueIdentifier>{70b8aed1-8afa-42dc-a414-4829da7fc261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global">
+      <UniqueIdentifier>{a1093224-2733-4cb1-8398-8db2502b8d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global\OS">
+      <UniqueIdentifier>{f9f269c3-6add-4901-8add-07463b68a608}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\OAL">
+      <UniqueIdentifier>{77043013-f1a5-4e7b-a7b4-ea9075a50e26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Base">
+      <UniqueIdentifier>{5e1dbdb8-c120-4fdd-a5e1-e74f14f04827}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Comm\Global\Types.h">
+      <Filter>Comm\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\BuildOptions.h">
+      <Filter>Comm\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Common.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Linux.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Win.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Android.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Lock.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Log.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\OALHeader.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\SyncObject.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Thread.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Timer.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\TimerComm.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSection.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Base\Object.hpp">
+      <Filter>Comm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\System.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

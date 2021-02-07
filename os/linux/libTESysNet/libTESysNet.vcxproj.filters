@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="TESysNet">
+      <UniqueIdentifier>{3e3f5bf3-71e4-42a9-b143-dc0eab83b43c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESysNet\AAAAA-Client">
+      <UniqueIdentifier>{69a9ced0-0118-4244-989f-d18e148c056e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESys">
+      <UniqueIdentifier>{df25422d-d5f4-4281-a725-00b0f8327cd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESys\Global">
+      <UniqueIdentifier>{d8705868-ac60-4376-b58d-4cdebd6440f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESys\Global\AAAAA">
+      <UniqueIdentifier>{7e14122e-45b2-4c82-8556-59e75c7c437b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESys\Global\OS">
+      <UniqueIdentifier>{bbe61ece-da2b-4743-b080-0b53a6d3d615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESys\Base">
+      <UniqueIdentifier>{c9d9bdc4-f4e0-4fdc-8a6f-227de2f267a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TESys\API">
+      <UniqueIdentifier>{9b35be83-8f38-445f-80fb-e23a085f5889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libTESysNet">
+      <UniqueIdentifier>{5f0b5f68-71b2-4a21-b739-08a13130189c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\TESysNet\ClientAndroid.cpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TESysNet\ClientAPI.cpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TESysNet\ClientUdpWin.cpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TESysNet\ClientWin.cpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TESysNet\Client.cpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TESys\Base\Object.cpp">
+      <Filter>TESys\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TESys\Base\ObjectAPI.cpp">
+      <Filter>TESys\Base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\TESysNet\Client.hpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESysNet\ClientAndroid.hpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESysNet\ClientUdpWin.hpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESysNet\ClientWin.hpp">
+      <Filter>TESysNet\AAAAA-Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\Global\BuildOptions.h">
+      <Filter>TESys\Global\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\Global\Types.h">
+      <Filter>TESys\Global\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\Global\OS\Common.h">
+      <Filter>TESys\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\Global\OS\Linux.h">
+      <Filter>TESys\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\Global\OS\Win.h">
+      <Filter>TESys\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\Global\OS\Android.h">
+      <Filter>TESys\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\Base\Object.hpp">
+      <Filter>TESys\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\DataBase.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\Define.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\Net.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\Struct.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TESys\API\Base.h">
+      <Filter>TESys\API</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>libTESysNet</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

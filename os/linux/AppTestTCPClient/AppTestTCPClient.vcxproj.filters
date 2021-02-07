@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App-Test-TCPClient">
+      <UniqueIdentifier>{4c3a2491-f3a2-420d-b80a-70ebfe2b16b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm">
+      <UniqueIdentifier>{3fffcc70-f705-4a2a-a6cc-f316c6f73439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global">
+      <UniqueIdentifier>{5fdbbfdc-1e10-4d32-8b7f-56ed795649f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global\OS">
+      <UniqueIdentifier>{2a6004f5-00da-4d5a-baeb-2fc8bee5295a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Socket">
+      <UniqueIdentifier>{b5017923-4d4a-4f88-bed5-29f4d4384b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Socket\TCP">
+      <UniqueIdentifier>{9e4bc206-9efd-4840-93a0-ba8264fab915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Base">
+      <UniqueIdentifier>{351e25ba-1ea2-4524-9b27-438b53fe0d43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\OAL">
+      <UniqueIdentifier>{bc5ab7a2-3dd1-447c-8543-abac4c48daee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Utils">
+      <UniqueIdentifier>{e0f49b61-441d-4f19-8292-f812ddedd1a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Test\TCPClient\main.cpp">
+      <Filter>App-Test-TCPClient</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Comm\Global\Types.h">
+      <Filter>Comm\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Common.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Linux.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Win.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Android.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClientWin.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServer.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerWin.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClient.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClientLinux.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Base\Object.hpp">
+      <Filter>Comm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\BuildOptions.h">
+      <Filter>Comm\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Lock.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Log.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\OALHeader.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\SyncObject.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\System.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Thread.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Timer.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\TimerComm.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSection.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\IntegerCount.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

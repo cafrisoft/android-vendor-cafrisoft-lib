@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="App-Database-MySQL">
+      <UniqueIdentifier>{4e5b572b-8eee-44e1-b580-73f5b5717657}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Database\MySQL\main.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\MySQL\AppCmdProc.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\MySQL\mysql.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\MySQL\insert.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\MySQL\CmdInsert.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\MySQL\CmdExport.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\MySQL\CmdVerify.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Database\MySQL\export.cpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\App\Database\MySQL\AppDefine.hpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\App\Database\MySQL\AppCmdProc.hpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\App\Database\MySQL\Cmd.hpp">
+      <Filter>App-Database-MySQL</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

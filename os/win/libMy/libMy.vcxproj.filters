@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="My">
+      <UniqueIdentifier>{f9cafead-31d8-4896-b5b6-cd547be5559f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\Global">
+      <UniqueIdentifier>{1df3fff3-62c8-498d-842d-32025f3d3142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\Global\AAAAA">
+      <UniqueIdentifier>{b03317bc-5c2b-4114-a093-51ade956fee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\Global\OS">
+      <UniqueIdentifier>{06acd6ea-7348-4e7b-8f8d-28a908e2536f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\OAL">
+      <UniqueIdentifier>{52a4f007-4bb7-483a-9c61-5da47a6599f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\DataEx">
+      <UniqueIdentifier>{3ccebf9f-fe14-4091-b57a-ce2c13edb354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\Base">
+      <UniqueIdentifier>{0e99209f-ebc5-4293-b408-9d503b8561bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\API">
+      <UniqueIdentifier>{8a994fad-a3b3-4140-a250-345226443298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\Socket">
+      <UniqueIdentifier>{acf61087-f297-4e85-837a-df4857e55ebf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\Socket\TCP">
+      <UniqueIdentifier>{aeea8c1c-9c7b-4d66-ad37-5bb372f50013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My\Socket\UDP">
+      <UniqueIdentifier>{a2941c01-691b-4baa-9eff-f8b47f5437c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\My\Global\BuildOptions.h">
+      <Filter>My\Global\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Global\Types.h">
+      <Filter>My\Global\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Global\OS\Common.h">
+      <Filter>My\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Global\OS\Linux.h">
+      <Filter>My\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Global\OS\Win.h">
+      <Filter>My\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Global\OS\Android.h">
+      <Filter>My\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\OAL\CriticalSectionWin.hpp">
+      <Filter>My\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\OAL\Thread.hpp">
+      <Filter>My\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\OAL\ThreadWin.hpp">
+      <Filter>My\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\OAL\CriticalSection.hpp">
+      <Filter>My\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\DataEx\Producer.hpp">
+      <Filter>My\DataEx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\DataEx\Exchanger.hpp">
+      <Filter>My\DataEx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\DataEx\Consumer.hpp">
+      <Filter>My\DataEx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Base\Object.hpp">
+      <Filter>My\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\OAL\Lock.hpp">
+      <Filter>My\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\OAL\SyncObject.hpp">
+      <Filter>My\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\OAL\OALHeader.hpp">
+      <Filter>My\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\API\Base.h">
+      <Filter>My\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Socket\TCP\TCPClient.hpp">
+      <Filter>My\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\My\Socket\TCP\TCPServer.hpp">
+      <Filter>My\Socket\TCP</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\My\OAL\Thread.cpp">
+      <Filter>My\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\OAL\ThreadWin.cpp">
+      <Filter>My\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\OAL\CriticalSection.cpp">
+      <Filter>My\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\OAL\CriticalSectionWin.cpp">
+      <Filter>My\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\DataEx\Producer.cpp">
+      <Filter>My\DataEx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\DataEx\Exchanger.cpp">
+      <Filter>My\DataEx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\DataEx\Consumer.cpp">
+      <Filter>My\DataEx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\Base\Object.cpp">
+      <Filter>My\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\Base\ObjectAPI.cpp">
+      <Filter>My\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\OAL\Lock.cpp">
+      <Filter>My\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\OAL\SyncObject.cpp">
+      <Filter>My\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\Socket\TCP\TCPServer.cpp">
+      <Filter>My\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\My\Socket\TCP\TCPClient.cpp">
+      <Filter>My\Socket\TCP</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

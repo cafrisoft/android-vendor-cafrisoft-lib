@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="App-Control-PatternDraw">
+      <UniqueIdentifier>{148b4dcf-36be-4a7b-bb2e-92b9cf9360d7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Control\PatternDraw\main.cpp">
+      <Filter>App-Control-PatternDraw</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\App\Control\PatternDraw\ril_srv_def.h">
+      <Filter>App-Control-PatternDraw</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

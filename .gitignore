@@ -30,3 +30,24 @@
 *.exe
 *.out
 *.app
+
+## ignore file ##
+*.opendb
+*.suo
+*.obj
+*.exe
+
+## ignore dir name ##
+.vs/
+x86/
+x64/
+bin/
+obj/
+Debug/
+Release/
+publish/
+teset-system-app/os/linux-cmake/
+teset-system-app/os/linux-database/
+teset-system-app/os/linux-python/
+
+

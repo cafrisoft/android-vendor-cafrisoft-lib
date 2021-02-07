@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App-Test-TCPServer">
+      <UniqueIdentifier>{cf3b1944-b2f5-4328-ae6f-40a41b422784}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Test\TCPServer\main.cpp">
+      <Filter>App-Test-TCPServer</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

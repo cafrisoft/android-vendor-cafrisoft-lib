@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Database">
+      <UniqueIdentifier>{6460f415-2bf6-4d2b-9136-26907bfd21c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database\RDBMS">
+      <UniqueIdentifier>{1b00a688-4e33-4788-927a-1d4cf32a8b36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database\AAAAA">
+      <UniqueIdentifier>{3343b494-ac9d-4a65-a650-28e1bad3ab32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database\Join">
+      <UniqueIdentifier>{87695345-fbbc-4735-a2ac-3c5747c27d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database\Single">
+      <UniqueIdentifier>{0954dee0-05e2-4e90-8d9f-14776ffcb57a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database\Global">
+      <UniqueIdentifier>{3c3bd50c-40a5-4bdb-af88-ba214423fa06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\RDBMS\MySQL.hpp">
+      <Filter>Database\RDBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\QueryResult.hpp">
+      <Filter>Database\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\RDBMS\Base.hpp">
+      <Filter>Database\RDBMS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\VarType.hpp">
+      <Filter>Database\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\single\Record.hpp">
+      <Filter>Database\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\single\Table.hpp">
+      <Filter>Database\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\single\Column.hpp">
+      <Filter>Database\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\single\Data.hpp">
+      <Filter>Database\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\single\Header.hpp">
+      <Filter>Database\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\Join\List.hpp">
+      <Filter>Database\Join</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\Global\BuildOptions.h">
+      <Filter>Database\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Database\Global\Type.h">
+      <Filter>Database\Global</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\RDBMS\MySQL_Database_RDBMS.cpp">
+      <Filter>Database\RDBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\RDBMS\Base_Database_RDBMS.cpp">
+      <Filter>Database\RDBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\VarType_Database.cpp">
+      <Filter>Database\AAAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\single\Record_Database_Single.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\single\Table_Database_Single.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\single\Column_Database_Single.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\single\Data_Database_Single.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\single\Header_Database_Single.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Join\List_Database_Join.cpp">
+      <Filter>Database\Join</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

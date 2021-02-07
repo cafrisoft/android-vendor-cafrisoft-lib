@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="TED">
+      <UniqueIdentifier>{a4132a64-6754-40d6-9e8e-1988004f55a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TED\AAAAA">
+      <UniqueIdentifier>{b0713890-bf08-44e4-b8ac-55afce55f25a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TED\Python">
+      <UniqueIdentifier>{d5537e75-dc7c-4c62-ae43-6c335f11fb9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TED\Python\AAAA">
+      <UniqueIdentifier>{e8617027-1676-4218-8e03-80d72178ea7e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="..\..\..\TED\Android.mk">
+      <Filter>TED\AAAAA</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libTED.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TED\Api.h">
+      <Filter>TED\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TED\Python\BuildOption.h">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\TED\Python\ril_srv_def.h">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libTED.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TED\Python\AdcApi.cpp">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TED\Python\SysApi.cpp">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TED\Python\AgingApi.cpp">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TED\Python\PatternApi.cpp">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TED\Python\DDApi.cpp">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\TED\Python\ANA670X_Api.cpp">
+      <Filter>TED\Python\AAAA</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

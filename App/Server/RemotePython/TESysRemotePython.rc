@@ -1,0 +1,8 @@
+service TESysRPython /system/bin/TESysRemotePython
+class main
+    user root
+    group radio cache inet misc audio log readproc wakelock
+    #    seclabel u : r:gct_service:s0
+
+
+

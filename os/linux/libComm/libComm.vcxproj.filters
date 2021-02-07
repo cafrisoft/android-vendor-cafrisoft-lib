@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Comm">
+      <UniqueIdentifier>{b46eb3d7-4aec-4652-a45a-89d98b38d665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global">
+      <UniqueIdentifier>{e8bf2cb5-37e2-4268-8fac-5309a7a2e801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global\AAAAA">
+      <UniqueIdentifier>{d1f5ae2c-8032-43f0-b69e-2a6fdf1c7a91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global\OS">
+      <UniqueIdentifier>{37e0a2fe-f53f-4ac5-a301-a3d4192ba879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\API">
+      <UniqueIdentifier>{3c8f59bd-9b92-40bf-9df1-a59b95d54e96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\DataEx">
+      <UniqueIdentifier>{0fa7a834-b7ca-4fcc-9467-2a816a5d6a15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Base">
+      <UniqueIdentifier>{541d7972-2ed0-465a-b375-70446b2bbc2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\OAL">
+      <UniqueIdentifier>{9d89a576-19b2-4306-afcd-72c2aea89024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Socket">
+      <UniqueIdentifier>{dc21f720-7162-4871-ac3b-093e176cc715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Socket\TCP">
+      <UniqueIdentifier>{b723c5f8-b6d9-4b16-a24c-4ad8240158df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Utils">
+      <UniqueIdentifier>{5ec74023-aef6-4011-87a3-5ccb71947c84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Socket\UDP">
+      <UniqueIdentifier>{5e783667-8244-4b85-b7ee-49d5f051937b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Comm\Global\Types.h">
+      <Filter>Comm\Global\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\BuildOptions.h">
+      <Filter>Comm\Global\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Common.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Linux.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Win.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Android.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\API\Base.h">
+      <Filter>Comm\API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\DataEx\Exchanger.hpp">
+      <Filter>Comm\DataEx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\DataEx\Producer.hpp">
+      <Filter>Comm\DataEx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\DataEx\Consumer.hpp">
+      <Filter>Comm\DataEx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Base\Object.hpp">
+      <Filter>Comm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Lock.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\SyncObject.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Thread.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSection.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClient.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClientWin.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClientLinux.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerWin.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServer.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.hpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Timer.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\TimerComm.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Log.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\System.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\IntegerCount.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\TemplateList.hpp">
+      <Filter>Comm\Global\AAAAA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPPClient.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServer.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerWin.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClient.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientWin.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\HeaderFiles.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\NetPacketFixed.hpp">
+      <Filter>Comm\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\NetPacket.hpp">
+      <Filter>Comm\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\StringTool.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\Property.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\HeaderFiles.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\CRC.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Comm\DataEx\Producer.cpp">
+      <Filter>Comm\DataEx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\DataEx\Consumer.cpp">
+      <Filter>Comm\DataEx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\DataEx\Exchanger.cpp">
+      <Filter>Comm\DataEx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Base\ObjectAPI.cpp">
+      <Filter>Comm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Base\Object.cpp">
+      <Filter>Comm\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionWin.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Lock.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SyncObject.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Thread.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadWin.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSection.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionLinux.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadLinux.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientWin.cpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClient.cpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientLinux.cpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerWin.cpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServer.cpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.cpp">
+      <Filter>Comm\Socket\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\TimerComm.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Timer.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\LogLinux.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\LogWin.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SystemLinux.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\IntegerCount.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServer.cpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.cpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerWin.cpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClient.cpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.cpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientWin.cpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\NetPacketFixed.cpp">
+      <Filter>Comm\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\NetPacket.cpp">
+      <Filter>Comm\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Property.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\CRC.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\StringTool.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

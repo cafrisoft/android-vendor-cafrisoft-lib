@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Python">
+      <UniqueIdentifier>{2ca7ef57-3b50-444e-9fd2-98895c532cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package">
+      <UniqueIdentifier>{24e3ac0a-5369-4592-bd63-d8618957ee64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib">
+      <UniqueIdentifier>{ae73be53-0203-4cb6-9e96-764560cab108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\conf">
+      <UniqueIdentifier>{2e53d7f6-5d41-4fce-ae11-c3b27680f65e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib\python3.8">
+      <UniqueIdentifier>{529531dc-d565-4b80-878c-c99dceace715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib\python3.8\site-packages">
+      <UniqueIdentifier>{124cf0c3-ab74-4cfd-968e-3f7cc7f4a597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib\python3.8\site-packages\Anapass">
+      <UniqueIdentifier>{c1dec592-3a71-451f-be79-c5804394af8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib\python3.8\site-packages\Anapass\Example">
+      <UniqueIdentifier>{9a97152c-d03b-4f85-92c1-373f94826326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android">
+      <UniqueIdentifier>{c8201ade-d92c-4929-9fef-f7fd1f3f8ec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA">
+      <UniqueIdentifier>{8ab802d3-3aff-421a-a892-06bdcab4f8f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python\android-python-package\lib\python3.8\AAAAA">
+      <UniqueIdentifier>{6c21206b-2546-4c16-a0c8-c3abb639acb9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\regadc.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\rreg.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\soutadc.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\vciadc.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\vlin1adc.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\wreg.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\adc.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\ex1.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\FTPClient.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\ldoadc.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\measure.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\TDeviceWin.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\TDeviceWinDLL.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\TModule.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Util.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Adc.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Aging.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\FlashMemory.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Register.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\TDeviceAndroid.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\TDeviceBase.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\ted.py">
+      <Filter>Python\android-python-package\lib\python3.8\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\platform.py">
+      <Filter>Python\android-python-package\lib\python3.8\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\subprocess.py">
+      <Filter>Python\android-python-package\lib\python3.8\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android\ptrn.py">
+      <Filter>Python\android-python-package\lib\python3.8\site-packages\Anapass\Example\Android</Filter>
+    </None>
+  </ItemGroup>
+</Project>

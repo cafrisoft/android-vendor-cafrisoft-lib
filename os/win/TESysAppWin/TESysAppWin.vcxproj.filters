@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{e89ac1b8-8b1f-49de-af7f-c3871725f51a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\ubuntu">
+      <UniqueIdentifier>{59f5dc67-7f10-474f-a2b0-58612f8df8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\my_sh">
+      <UniqueIdentifier>{edfd7d77-b408-4a1d-b921-64ec0be4c0da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app">
+      <UniqueIdentifier>{4a199ffd-fb6c-4afa-b270-a2e366592b0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\Doc">
+      <UniqueIdentifier>{040dfb50-ea35-4f7a-a838-cda5249d6e81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\Doc\TMD">
+      <UniqueIdentifier>{9d425ec7-ae8c-4311-b926-68195ae0a3f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\Doc\TMD\ANA6706">
+      <UniqueIdentifier>{55454d42-065d-42be-8325-b102182782da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\os">
+      <UniqueIdentifier>{b0269424-c445-4afe-8389-1f4742d9ede4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\os\linux-cmake">
+      <UniqueIdentifier>{db4bd1bc-9c63-43e4-97c3-0246f55ba306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\os\linux-python">
+      <UniqueIdentifier>{bc221995-7140-4924-ab77-b1e232834ba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\os\linux-database">
+      <UniqueIdentifier>{a34a6582-0347-4db8-819d-aa870a0b3897}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\AAAAA">
+      <UniqueIdentifier>{b852429c-461a-4a51-b155-631fd8373321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\git-config">
+      <UniqueIdentifier>{23ef54be-0cb6-4270-8fb0-5e77d9495889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test-system-app\Doc\vsftpd">
+      <UniqueIdentifier>{374e5d16-435d-4f3d-a1ed-4f5b036735e7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TESysAppWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Doc\TMD\ANA6706\A3-AMB640UP01-M-FMTP-00_ANAPASS_final_190825.TMD">
+      <Filter>test-system-app\Doc\TMD\ANA6706</Filter>
+    </None>
+    <None Include="..\..\..\Doc\TMD\ANA6706\A3-AMB640UP01-M-FMTP-00_ANAPASS_final_190825-Tail.py">
+      <Filter>test-system-app\Doc\TMD\ANA6706</Filter>
+    </None>
+    <None Include="..\..\linux-cmake\Makefile">
+      <Filter>test-system-app\os\linux-cmake</Filter>
+    </None>
+    <None Include="..\..\..\Config\ubuntu\TESysDataAcq.service">
+      <Filter>Config\ubuntu</Filter>
+    </None>
+    <None Include="..\..\..\Config\ubuntu\TESysControl.service">
+      <Filter>Config\ubuntu</Filter>
+    </None>
+    <None Include="..\..\..\Config\my_sh\copy_tesys.sh">
+      <Filter>Config\my_sh</Filter>
+    </None>
+    <None Include="..\..\linux-cmake\service.restart.sh">
+      <Filter>test-system-app\os\linux-cmake</Filter>
+    </None>
+    <None Include="..\..\..\.gitignore">
+      <Filter>test-system-app\AAAAA</Filter>
+    </None>
+    <None Include="..\..\..\.git\config">
+      <Filter>test-system-app\git-config</Filter>
+    </None>
+    <None Include="..\..\..\Doc\vsftpd\vsftpd.conf">
+      <Filter>test-system-app\Doc\vsftpd</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\linux-cmake\CMakeLists.txt">
+      <Filter>test-system-app\os\linux-cmake</Filter>
+    </Text>
+    <Text Include="..\..\linux-python\CMakeLists.txt">
+      <Filter>test-system-app\os\linux-python</Filter>
+    </Text>
+    <Text Include="..\..\linux-database\CMakeLists.txt">
+      <Filter>test-system-app\os\linux-database</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

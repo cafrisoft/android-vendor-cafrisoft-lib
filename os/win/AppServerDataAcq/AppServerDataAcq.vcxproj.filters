@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App-Server-DataAcq">
+      <UniqueIdentifier>{54f61833-ee71-4805-a432-52f35bc1e63a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App-Server-DataAcq\AAAAA">
+      <UniqueIdentifier>{3ed4f422-ddd0-4464-88a8-66c488910875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App-Server-DataAcq\AAAAA-Notifier">
+      <UniqueIdentifier>{3fd93ae5-8593-423c-b97f-f51c231c3215}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\App\Server\DataAcq\Notifier.hpp">
+      <Filter>App-Server-DataAcq\AAAAA-Notifier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\App\Server\DataAcq\AppDefine.h">
+      <Filter>App-Server-DataAcq\AAAAA</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Server\DataAcq\main.cpp">
+      <Filter>App-Server-DataAcq\AAAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Server\DataAcq\Notifier.cpp">
+      <Filter>App-Server-DataAcq\AAAAA-Notifier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Server\DataAcq\NotifierExtern.cpp">
+      <Filter>App-Server-DataAcq\AAAAA-Notifier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Server\DataAcq\NotifierTester.cpp">
+      <Filter>App-Server-DataAcq\AAAAA-Notifier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Server\DataAcq\NotifierTCPServer.cpp">
+      <Filter>App-Server-DataAcq\AAAAA-Notifier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Server\DataAcq\NotifierRawDataSaver.cpp">
+      <Filter>App-Server-DataAcq\AAAAA-Notifier</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\App\Server\DataAcq\NotifierExporter.cpp">
+      <Filter>App-Server-DataAcq\AAAAA-Notifier</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

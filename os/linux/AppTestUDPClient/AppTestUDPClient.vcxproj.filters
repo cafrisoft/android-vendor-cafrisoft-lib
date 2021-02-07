@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App-Test-UDPClient">
+      <UniqueIdentifier>{58734ca9-1135-492f-a9b4-16391fb6f3ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm">
+      <UniqueIdentifier>{c5364d45-4be7-4263-88d3-40a1bc010b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global">
+      <UniqueIdentifier>{ea689aaa-f3dd-4dd0-a817-ba22186194e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Global\OS">
+      <UniqueIdentifier>{3a4cdff3-c779-4939-8638-d1038211a9e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\OAL">
+      <UniqueIdentifier>{2b0fd853-32ba-46db-805d-3b7a2c31df10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Base">
+      <UniqueIdentifier>{32e82e9e-bfdd-4278-b765-6f4243250fc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Socket">
+      <UniqueIdentifier>{917cd05e-937a-4552-993c-79c44f4d144a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Socket\UDP">
+      <UniqueIdentifier>{d251d01a-dbb4-4f06-8939-124c2defe8de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Utils">
+      <UniqueIdentifier>{72e3d90f-1419-41bb-a98a-a1e10df7ba3a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Comm\Global\TemplateList.hpp">
+      <Filter>Comm\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\Types.h">
+      <Filter>Comm\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\BuildOptions.h">
+      <Filter>Comm\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Common.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Linux.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Win.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Global\OS\Android.h">
+      <Filter>Comm\Global\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Lock.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Log.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\OALHeader.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\SyncObject.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\System.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Thread.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadLinux.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadWin.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\Timer.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\TimerComm.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSection.hpp">
+      <Filter>Comm\OAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Base\Object.hpp">
+      <Filter>Comm\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPPClient.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServer.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerWin.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClient.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientWin.hpp">
+      <Filter>Comm\Socket\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\IntegerCount.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\App\Test\UDPClient\main.cpp">
+      <Filter>App-Test-UDPClient</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

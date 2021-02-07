@@ -1,0 +1,2 @@
+#define LIBTESYSNET_API __declspec(dllexport)
+#define LIBTESYSNET_API __declspec(dllimport)

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8c579f00-0ae0-467e-aef3-6efb1f8e7ea1}</ProjectGuid>
+    <RootNamespace>libComm</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;$(ProjectDir)..\..\..\Comm\OpenSource\freeType\2.10.2\binary\win\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;$(ProjectDir)..\..\..\Comm\OpenSource\freeType\2.10.2\binary\win\include;C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /D _WINSOCK_DEPRECATED_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(Project_Dir)..\..\..\;$(ProjectDir)..\..\..\Comm\OpenSource\freeType\2.10.2\binary\win\include;C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /D _CRT_SECURE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Comm\API\Base.h" />
+    <ClInclude Include="..\..\..\Comm\API\Packet.hpp" />
+    <ClInclude Include="..\..\..\Comm\Base\Object.hpp" />
+    <ClInclude Include="..\..\..\Comm\Database\RDBMS\MySQL.hpp" />
+    <ClInclude Include="..\..\..\Comm\Database\RDBMS\Product.hpp" />
+    <ClInclude Include="..\..\..\Comm\DataEx\Consumer.hpp" />
+    <ClInclude Include="..\..\..\Comm\DataEx\Exchanger.hpp" />
+    <ClInclude Include="..\..\..\Comm\DataEx\Producer.hpp" />
+    <ClInclude Include="..\..\..\Comm\Draw2D\File\Bmp.hpp" />
+    <ClInclude Include="..\..\..\Comm\Draw2D\Fourcc.hpp" />
+    <ClInclude Include="..\..\..\Comm\Draw2D\Txt\FreeType.hpp" />
+    <ClInclude Include="..\..\..\Comm\Draw2D\v4l2_fourcc_def.h" />
+    <ClInclude Include="..\..\..\Comm\Draw2D\v4l2_linux_videodev2.h" />
+    <ClInclude Include="..\..\..\Comm\Global\BuildOptions.h" />
+    <ClInclude Include="..\..\..\Comm\Global\OS\Android.h" />
+    <ClInclude Include="..\..\..\Comm\Global\OS\Common.h" />
+    <ClInclude Include="..\..\..\Comm\Global\OS\Linux.h" />
+    <ClInclude Include="..\..\..\Comm\Global\OS\Win.h" />
+    <ClInclude Include="..\..\..\Comm\Global\TemplateList.hpp" />
+    <ClInclude Include="..\..\..\Comm\Global\Types.h" />
+    <ClInclude Include="..\..\..\Comm\NetUtils\FTPClient.hpp" />
+    <ClInclude Include="..\..\..\Comm\NetUtils\FTPClient_libftp.hpp" />
+    <ClInclude Include="..\..\..\Comm\NetUtils\FTPDefine.h" />
+    <ClInclude Include="..\..\..\Comm\OAL\Cond.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\CondLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\CondWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSection.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\CriticalSectionWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\DateTime.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\FileSys.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\HeaderFiles.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\Lock.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\Log.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\LogAndroid.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\LogLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\LogWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\Mutex.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\MutexLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\MutexWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\ProcessMutex.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\ProcessMutexLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\ProcessMutexWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\Semaphore.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\SemaphoreLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\SemaphoreWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\SyncObject.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\System.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\Thread.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadService.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\ThreadWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\Timer.hpp" />
+    <ClInclude Include="..\..\..\Comm\OAL\TimerComm.hpp" />
+    <ClInclude Include="..\..\..\Comm\OpenSource\freeType\2.10.2\binary\win\include\ft2build.h" />
+    <ClInclude Include="..\..\..\Comm\OpenSource\ftplib-4.0-1\src\ftplib.h" />
+    <ClInclude Include="..\..\..\Comm\Property\Path.hpp" />
+    <ClInclude Include="..\..\..\Comm\Property\System.hpp" />
+    <ClInclude Include="..\..\..\Comm\Shell\CmdItem.hpp" />
+    <ClInclude Include="..\..\..\Comm\Shell\CmdSet.hpp" />
+    <ClInclude Include="..\..\..\Comm\Shell\Main.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\MyRILPacket.h" />
+    <ClInclude Include="..\..\..\Comm\Socket\NetPacket.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\NetPacketFixed.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClient.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClientLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPClientWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServer.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClient.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPPClient.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServer.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Utils.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\Android.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\argparse.h" />
+    <ClInclude Include="..\..\..\Comm\Utils\Counter.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\CRC.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\HeaderFiles.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\IntegerCount.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\Property.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\Queue.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\StringTool.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\TxtFile.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\Vector.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Comm\Base\Object.cpp" />
+    <ClCompile Include="..\..\..\Comm\Base\ObjectAPI.cpp" />
+    <ClCompile Include="..\..\..\Comm\Database\RDBMS\MySQL.cpp" />
+    <ClCompile Include="..\..\..\Comm\Database\RDBMS\Product_Comm_Database.cpp" />
+    <ClCompile Include="..\..\..\Comm\DataEx\Consumer.cpp" />
+    <ClCompile Include="..\..\..\Comm\DataEx\Exchanger.cpp" />
+    <ClCompile Include="..\..\..\Comm\DataEx\Producer.cpp" />
+    <ClCompile Include="..\..\..\Comm\Draw2D\File\Bmp_Comm_Draw2D_File.cpp" />
+    <ClCompile Include="..\..\..\Comm\Draw2D\Txt\FreeType_Comm_Draw2D_Txt.cpp" />
+    <ClCompile Include="..\..\..\Comm\NetUtils\FTPClient.cpp" />
+    <ClCompile Include="..\..\..\Comm\NetUtils\FTPClient_libftp.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\CondLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\CondWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Cond_Comm_OAL.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSection.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\DateTimeComm.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\FileSysComm.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\FileSysLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\FileSysWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Lock.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Log.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\LogAndroid.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\LogLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\LogWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\MutexLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\MutexWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Mutex_Comm_OAL.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutex_Comm_OAL.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Semaphore.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\SemaphoreLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\SemaphoreWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\SyncObject.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\SystemComm.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\SystemLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\SystemWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Thread.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadService.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Timer.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\TimerComm.cpp" />
+    <ClCompile Include="..\..\..\Comm\OpenSource\ftplib-4.0-1\src\ftplib_libcomm_opensrc.c" />
+    <ClCompile Include="..\..\..\Comm\Property\Path_Comm_Property.cpp" />
+    <ClCompile Include="..\..\..\Comm\Property\System_Comm_Property.cpp" />
+    <ClCompile Include="..\..\..\Comm\Shell\CmdItem.cpp" />
+    <ClCompile Include="..\..\..\Comm\Shell\CmdSet.cpp" />
+    <ClCompile Include="..\..\..\Comm\Shell\MainShell.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\NetPacket.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\NetPacketFixed.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClient.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServer.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClient.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServer.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerWin.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\Utils_Comm_Socket.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\AndroidScreenCap.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\Android_Comm_Utils.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\argparse.c" />
+    <ClCompile Include="..\..\..\Comm\Utils\Counter_Comm_Utils.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\CRC.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\IntegerCount.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\Property_Comm_Utils.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\StringTool.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\TxtFile_Comm_Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Comm\Android.mk" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

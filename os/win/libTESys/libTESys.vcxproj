@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2bb53289-eedb-4bd3-b101-fa1e0fda4d42}</ProjectGuid>
+    <RootNamespace>libTESys</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/MP /D _CRT_SECURE_NO_WARNINGS /D "COMM_EXPORTS" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(Project_Dir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\TESys\API\Packet.hpp" />
+    <ClInclude Include="..\..\..\TESys\API\Property.hpp" />
+    <ClInclude Include="..\..\..\TESys\API\Utils.hpp" />
+    <ClInclude Include="..\..\..\TESys\Control\AgingMonitor.hpp" />
+    <ClInclude Include="..\..\..\TESys\Control\Operator.hpp" />
+    <ClInclude Include="..\..\..\TESys\Control\Tester.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Adc.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Aging\Job.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Aging\Py.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Aging\PyCollection.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Aging\Sc.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Aging\Tc.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Aging\TcStep.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\DataAcqDB.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\DataAcqDBRaw.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Export\RawDB.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Export\TED.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Export\TEDCollection.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\Status.hpp" />
+    <ClInclude Include="..\..\..\TESys\Data\TesterError.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Join\List.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Join\Table.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Join\TcStepList.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Property\Single.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcBase.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcErr.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcExtA.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcExtV.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcLdoV.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcProp.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcRegV.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\AdcSoutV.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\Cpu.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\DutPcb.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\Hardware.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\Job.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\JobList.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\Sc.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\ScList.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\SocPcb.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\Software.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\Tc.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\TcList.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\TcStep.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\TcStepList.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\Ted.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Single\TedList.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Table.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Utils\Join.hpp" />
+    <ClInclude Include="..\..\..\TESys\DB\Utils\Single.hpp" />
+    <ClInclude Include="..\..\..\TESys\Global\BuildOptions.h" />
+    <ClInclude Include="..\..\..\TESys\Net\Command.hpp" />
+    <ClInclude Include="..\..\..\TESys\Net\PacketControl.hpp" />
+    <ClInclude Include="..\..\..\TESys\Net\PacketDataAcq.hpp" />
+    <ClInclude Include="..\..\..\TESys\Net\PacketPython.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\DataAcq.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\FileSync.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\HeaderFiles.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\Hub.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\Net.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\Path.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\PatternDraw.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\TED.hpp" />
+    <ClInclude Include="..\..\..\TESys\Property\Tester.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\ADC\Ina3221.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\ADC\Max11301.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\ADC\Max11312.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\ADC\Max113xx.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\Aging.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\ANA6707.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\ANA670X.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\DD\DSIM.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\DD\GraphicsFrameBuffer.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\DeviceDriver.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\PowerSource.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\VerifyBoard.hpp" />
+    <ClInclude Include="..\..\..\TESys\TED\VerifyBoard_v2_1.hpp" />
+    <ClInclude Include="..\..\..\TESys\Utils\Tmd2Py.hpp" />
+    <ClInclude Include="..\..\..\TESys\Utils\TmdStringTool.hpp" />
+    <ClInclude Include="..\..\..\TESys\Utils\VerifyTed.hpp" />
+    <ClInclude Include="framework.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\TESys\API\Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\API\Utils.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\AgingMonitor_Export.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\AgingMonitor_TESys_Control.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorAgingMonitor.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorCommander.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorCommanderExtern.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorDataAcqReceiver.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorDataConsumerDataAcq.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorDataConsumerHubStatus.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorDataConsumerTesterStatus.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorDataProducerDataAcq.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorDataProducerHubStatus.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorDataProducerTesterStatus.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorFileSync.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorNotifyReceiver.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorNotifyReceiverCmdProc.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorNotifyReceiverExtern.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorNotifyReceiverService.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorTesterDictionary.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\OperatorTesterMonitor.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\Operator_Extern.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\Operator_TESys_Control.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterCommandReceiver.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterCommandReceiverCmdProc.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterNotifier.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterNotifierCmdProc.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterNotifierExtern.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterPatternDrawClient.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterStatusReporter.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\TesterTransaction_TH_HT.cpp" />
+    <ClCompile Include="..\..\..\TESys\Control\Tester_TESys_Control.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Adc_TESys_Data.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Aging\Job_TESys_Data_Aging.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Aging\PyCollection_TESys_Data_Aging.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Aging\Py_TESys_Data_Aging.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Aging\Sc_TESys_Data_Aging.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Aging\TcStepExportCSV.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Aging\TcStep_TESys_Data_Aging.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Aging\Tc_TESys_Data_Aging.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\DataAcqDBRawExport.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\DataAcqDBRawQuery.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\DataAcqDBRawVerify.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\DataAcqDBRaw_TESys_Data.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\DataAcqDB_Export.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\DataAcqDB_ExportData.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\DataAcqDB_TESys_Data.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Export\RawDB_TESys_Data_Export.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Export\TEDCollection_TESys_Data_Export.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Export\TED_TESys_Data_Export.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\Status_TESys_Data.cpp" />
+    <ClCompile Include="..\..\..\TESys\Data\TesterError_TESys_Data.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Join\List_TESys_DB_Join.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Join\Table_TESys_DB_Join.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Join\TcStepList_TESys_DB_Join.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Property\Single_TESys_DB_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcBase_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcErr_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcExtA_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcExtV_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcLdoV_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcProp_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcRegV_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\AdcSoutV_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\Cpu_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\DutPcb_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\Hardware_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\JobList_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\Job_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\ScList_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\Sc_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\SocPcb_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\Software_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\TcList_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\TcStepList_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\TcStep_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\Tc_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\TedList_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Single\Ted_TESys_DB_Single.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Utils\Join_TESys_DB_Utils.cpp" />
+    <ClCompile Include="..\..\..\TESys\DB\Utils\Single_TESys_DB_Utils.cpp" />
+    <ClCompile Include="..\..\..\TESys\Net\Command.cpp" />
+    <ClCompile Include="..\..\..\TESys\Net\PacketControl.cpp" />
+    <ClCompile Include="..\..\..\TESys\Net\PacketDataAcq.cpp" />
+    <ClCompile Include="..\..\..\TESys\Net\PacketPython.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\DataAcq_TESys_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\FileSyncFtp.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\FileSyncStatus.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\FileSync_TESys_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\HubFtpServer.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\Hub_TESys_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\Net_TESys_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\PathControlShell.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\PathDataAcq.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\Path_DeviceDriver.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\Path_TESys_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\PatternDraw_TESys_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\TED_TESys_Property.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\TesterPropertyAgingComm.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\TesterPropertyBoardComm.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\TesterPropertyComm.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\TesterPropertyErrorClass.cpp" />
+    <ClCompile Include="..\..\..\TESys\Property\TesterPropertyStatusClass.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\ADC\Ina3221.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\ADC\Max11301.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\ADC\Max11312.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\ADC\Max113xx.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\Aging_TESys_TED.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\ANA6707_TESys_TED.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\ANA670X_TESys_TED.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\DD\DSIM_TESys_TED_Display.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\DD\GraphicsFrameBuffer_TESys_TED_Display.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\DeviceDriver_TESys_TED.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\PowerSource_TESys_TED.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_TESys_TED.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1_ADC.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1_Aging.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1_ANA670X.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1_Display.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1_DriverPathADC.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1_DriverPathDisplay.cpp" />
+    <ClCompile Include="..\..\..\TESys\TED\VerifyBoard_v2_1_LED.cpp" />
+    <ClCompile Include="..\..\..\TESys\Utils\Tmd2Py.cpp" />
+    <ClCompile Include="..\..\..\TESys\Utils\TmdStringTool.cpp" />
+    <ClCompile Include="..\..\..\TESys\Utils\VerifyTed_TESys_Utils.cpp" />
+    <ClCompile Include="libTESys.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\TESys\Android.mk" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
