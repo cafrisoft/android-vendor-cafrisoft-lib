@@ -12,8 +12,11 @@ namespace OAL {
 #if (CommOS==CommOS_WIN)
         obj = std::make_shared<ProcessMutexWin>(key);
 
-#elif (CommOS==CommOS_LINUX || CommOS==CommOS_ANDROID)
+#elif (CommOS==CommOS_LINUX )
         obj = std::make_shared<ProcessMutexLinux>(key);
+
+#elif (CommOS==CommOS_ANDROID )
+        obj = NULL;
 
 #else
 #error "Select OS"
