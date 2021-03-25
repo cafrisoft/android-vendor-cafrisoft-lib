@@ -111,9 +111,11 @@ namespace Comm {
         }
 #endif
 
+        //#define ANDROID_PLATFORM_SDK_VERSION 28
+
         bool Android::ScreenCaptureAndRGBVerify(unsigned char r, unsigned char g, unsigned char b) {
 
-#if (CommOS==CommOS_ANDROID)
+#if (CommOS==CommOS_ANDROID  &&  ANDROID_MAJOR_VERSION < 9 )
 
             bool isVerify = false;
 

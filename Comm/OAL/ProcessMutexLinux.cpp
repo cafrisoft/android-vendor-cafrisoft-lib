@@ -2,13 +2,15 @@
 #include <Comm/OAL/Log.hpp>
 #include <Comm/OAL/ProcessMutexLinux.hpp>
 
-#if (CommOS==CommOS_ANDROID )
+#if (CommOS==CommOS_ANDROID)
 #include <linux/ipc.h>
 #include <linux/sem.h>
 #include <sys/syscall.h>
 #endif
 
-#if (CommOS==CommOS_LINUX)
+#if ((CommOS==CommOS_ANDROID ) || (CommOS==CommOS_LINUX))
+
+//#if ANDROID_PLATFORM_SDK_VERSION >= 28  //Android9
 union semun {
     int val;
     struct semid_ds* buf;
@@ -16,10 +18,13 @@ union semun {
     struct seminfo* __buf;
     void* __pad;
 };
+//#endif
+
 #endif
 
 
-#if (CommOS==CommOS_ANDROID )
+#if (CommOS==CommOS_ANDROID)
+#if (ANDROID_MAJOR_VERSION < 9)
 #define __IPC_64            0x100
 
 int semget(key_t key, int nsems, int semflg)
@@ -84,10 +89,10 @@ int semop(int semid, struct sembuf* sops, unsigned nsops)
 
     return ret;
 }
+#endif //#if (ANDROID_MAJOR_VERSION < 9)
+#endif //#if (CommOS==CommOS_ANDROID)
 
-#endif
-
-#if (CommOS==CommOS_LINUX || CommOS==CommOS_ANDROID )
+#if (CommOS==CommOS_LINUX  )
 
 namespace Comm {
     namespace OAL {

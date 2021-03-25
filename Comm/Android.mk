@@ -1,10 +1,9 @@
 LOCAL_PATH:= $(call my-dir)
 
 ##########################################################################################################
-# TESysNet Shared Lib
+# Comm Shared Lib
 ##########################################################################################################
 include $(CLEAR_VARS)
-include $(LOCAL_PATH)/../AndroidBuildCommon.mk
 
 BASE_SRC = \
     Base/Object.cpp
@@ -77,12 +76,10 @@ LOCAL_SRC_FILES:= \
 #LOCAL_C_INCLUDES:= \
 #      $(TESYS_INC_TOP)
 
-#LOCAL_CFLAGS += -fno-stack-protector
-#LOCAL_CFLAGS += -Wall
-#LOCAL_CFLAGS += -Wno-order
-#LOCAL_CFLAGS += -Wno-unused-parameter
-#LOCAL_C_INCLUDES +=  $(TOP)/bionic/libc/include
-#LOCAL_CFLAGS += -D_GDM_SIMULATION
+COMM_INC_TOP := $(LOCAL_PATH)/..
+LOCAL_C_INCLUDES:= $(COMM_INC_TOP)
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_PLATFORM_SDK_VERSION=$(PLATFORM_SDK_VERSION)
 
 LOCAL_SHARED_LIBRARIES := \
         libbinder            \
@@ -90,8 +87,9 @@ LOCAL_SHARED_LIBRARIES := \
         libcutils            \
         libnetutils          \
         libui               \
-        libgui
+        libgui \
+        liblog
         
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE:= libTESysComm
+LOCAL_MODULE:= libCafriComm
 include $(BUILD_SHARED_LIBRARY)

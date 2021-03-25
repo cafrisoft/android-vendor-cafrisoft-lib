@@ -35,5 +35,10 @@
 #define C_FSEEK64  fseeko
 #define C_FTELL64  ftello
 
+#if (ANDROID_PLATFORM_SDK_VERSION == 28)
+#define ANDROID_MAJOR_VERSION 9
+#else
+#define ANDROID_MAJOR_VERSION 0
 #endif
 
+#endif  //COMM_GLOBAL_OS_ANDROID_H__
