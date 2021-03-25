@@ -7,15 +7,25 @@
 namespace Comm {
 namespace OAL {
 
-    class IThreadService {
+    class IThreadService : public Comm::Base::Object {
+
+    protected:
+        long long _TotalReceivedPacketCount;
+        long long _ReceivedPacketCount;
 
     public:
+        IThreadService();
         virtual ~IThreadService();
 
     public:
         virtual void Service() = 0;
         virtual void WaitForNextService() = 0;
         virtual bool IsServiceRun() = 0;
+
+    public:
+        long long GetTotalReceivedPacketCount();
+        long long GetReceivedPacketCount();
+        void ResetReceivedPacketCount();
     };
 
     class ThreadService {

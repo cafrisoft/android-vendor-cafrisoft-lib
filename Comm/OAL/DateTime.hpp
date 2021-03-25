@@ -20,11 +20,16 @@ namespace Comm {
         class DateTime : public Base::Object {
 
         public:
+            static const time_t _SecondPerDay = 3600 * 24;
+
+        public:
             static time_t GetUtcTime();
             static time_t GetUtcTime(int utcYear, int utcMon, int utcDay, int utcHour = 0, int utcMin = 0, int utcSec = 0);
             static time_t GetUtcTime_KST(int kstYear, int kstMon, int kstDay, int kstHour = 0, int kstMin = 0, int kstSec=0);
             static time_t GetUtcTime_KST_SqlFmtDate(std::string strDate);  // ex1) 2020-11-19
             static time_t GetUtcTime_KST_SqlFmtDateTime(std::string strDateTime);  // ex1) 2020-11-19 19:42:24
+            static time_t GetUtcTime_KST_YYYYMMDD_HHMMSS(int yyyyMmDd, int hhMmSs);  // ex) yyyyMmDd:20201119, hhMmSs:194224 
+            static time_t GetUtcTime_KST_YYYYMMDD(int yyyyMmDd);  // ex) yyyyMmDd:20201119
             static time_t GetUtcMaxTime();
             static time_t GetUtcMinTime();
 
@@ -36,6 +41,7 @@ namespace Comm {
             static int GetUtcMinute(time_t utcTime);
             static int GetUtcSecond(time_t utcTime);
             static std::string GetUtcTimeString(time_t utcTime);
+            static struct CommDateTime GetUtcCommDateTime(time_t utcTime);
 
             //Local
             static int GetLocalYear(time_t utcTime);
@@ -52,7 +58,10 @@ namespace Comm {
             static int GetKstHour(time_t utcTime);
             static int GetKstMinute(time_t utcTime);
             static int GetKstSecond(time_t utcTime);
-
+            static int GetKstYYYYMMDD(time_t utcTime);  //return format YYYYMMDD
+            static int GetKstHHMMSS(time_t utcTime);  //return format HHMMSS
+            static struct CommDateTime GetKstCommDateTime(time_t utcTime);
+            
             static std::string GetKstDateString(time_t utcTime = DateTime::GetUtcTime());
             static std::string GetKstTimeString(time_t utcTime = DateTime::GetUtcTime());
             static std::string GetKstDateTimeString(time_t utcTime = DateTime::GetUtcTime());      //Format0 XXXX-XX-XX XX:XX:XX

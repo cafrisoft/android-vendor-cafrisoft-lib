@@ -156,8 +156,6 @@
     <ClInclude Include="..\..\..\Comm\API\Base.h" />
     <ClInclude Include="..\..\..\Comm\API\Packet.hpp" />
     <ClInclude Include="..\..\..\Comm\Base\Object.hpp" />
-    <ClInclude Include="..\..\..\Comm\Database\RDBMS\MySQL.hpp" />
-    <ClInclude Include="..\..\..\Comm\Database\RDBMS\Product.hpp" />
     <ClInclude Include="..\..\..\Comm\DataEx\Consumer.hpp" />
     <ClInclude Include="..\..\..\Comm\DataEx\Exchanger.hpp" />
     <ClInclude Include="..\..\..\Comm\DataEx\Producer.hpp" />
@@ -214,6 +212,8 @@
     <ClInclude Include="..\..\..\Comm\Shell\CmdItem.hpp" />
     <ClInclude Include="..\..\..\Comm\Shell\CmdSet.hpp" />
     <ClInclude Include="..\..\..\Comm\Shell\Main.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\End\TcpMultiServer.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\End\TcpServer.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\MyRILPacket.h" />
     <ClInclude Include="..\..\..\Comm\Socket\NetPacket.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\NetPacketFixed.hpp" />
@@ -223,31 +223,38 @@
     <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServer.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerWin.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\Monitor.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\TcpClient.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\TcpServer.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\UdpClientPost.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\UdpServer.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\Worker.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClient.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientWin.hpp" />
-    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPPClient.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServer.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServerWin.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\Utils.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\Android.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\argparse.h" />
+    <ClInclude Include="..\..\..\Comm\Utils\ArgParser.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\Convert.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\Counter.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\CRC.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\HeaderFiles.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\IntegerCount.hpp" />
+    <ClInclude Include="..\..\..\Comm\Utils\LogFile.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\Property.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\Queue.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\StringTool.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\TxtFile.hpp" />
     <ClInclude Include="..\..\..\Comm\Utils\Vector.hpp" />
+    <ClInclude Include="..\..\..\Comm\VarType.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Comm\Base\Object.cpp" />
     <ClCompile Include="..\..\..\Comm\Base\ObjectAPI.cpp" />
-    <ClCompile Include="..\..\..\Comm\Database\RDBMS\MySQL.cpp" />
-    <ClCompile Include="..\..\..\Comm\Database\RDBMS\Product_Comm_Database.cpp" />
     <ClCompile Include="..\..\..\Comm\DataEx\Consumer.cpp" />
     <ClCompile Include="..\..\..\Comm\DataEx\Exchanger.cpp" />
     <ClCompile Include="..\..\..\Comm\DataEx\Producer.cpp" />
@@ -255,70 +262,287 @@
     <ClCompile Include="..\..\..\Comm\Draw2D\Txt\FreeType_Comm_Draw2D_Txt.cpp" />
     <ClCompile Include="..\..\..\Comm\NetUtils\FTPClient.cpp" />
     <ClCompile Include="..\..\..\Comm\NetUtils\FTPClient_libftp.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\CondLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\CondWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\Cond_Comm_OAL.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\CriticalSection.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\DateTimeComm.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\FileSysComm.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\FileSysLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\FileSysWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\Lock.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\Log.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\LogAndroid.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\LogLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\LogWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\MutexLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\MutexWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\Mutex_Comm_OAL.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutex_Comm_OAL.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\Semaphore.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\SemaphoreLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\SemaphoreWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\SyncObject.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\SystemComm.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\SystemLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\SystemWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\Thread.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\ThreadLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\ThreadService.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\ThreadWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\Timer.cpp" />
-    <ClCompile Include="..\..\..\Comm\OAL\TimerComm.cpp" />
+    <ClCompile Include="..\..\..\Comm\OAL\Cond.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CondLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CondWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSection.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\CriticalSectionWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\DateTimeComm.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Event.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\EventWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\FileSysComm.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\FileSysLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\FileSysWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Lock.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Log.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\LogAndroid.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\LogLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\LogWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Mutex.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\MutexLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\MutexWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutex.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Semaphore.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SemaphoreLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SemaphoreWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SyncObject.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SystemComm.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SystemLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\SystemWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Thread.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadService.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ThreadWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Timer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\TimerComm.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)OAL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)OAL\</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\..\..\Comm\OpenSource\ftplib-4.0-1\src\ftplib_libcomm_opensrc.c" />
     <ClCompile Include="..\..\..\Comm\Property\Path_Comm_Property.cpp" />
     <ClCompile Include="..\..\..\Comm\Property\System_Comm_Property.cpp" />
     <ClCompile Include="..\..\..\Comm\Shell\CmdItem.cpp" />
     <ClCompile Include="..\..\..\Comm\Shell\CmdSet.cpp" />
     <ClCompile Include="..\..\..\Comm\Shell\MainShell.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\End\TcpMultiServer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\End\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\End\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\End\TcpServer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\End\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\End\</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\..\..\Comm\Socket\NetPacket.cpp" />
     <ClCompile Include="..\..\..\Comm\Socket\NetPacketFixed.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClient.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServer.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClient.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServer.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerWin.cpp" />
-    <ClCompile Include="..\..\..\Comm\Socket\Utils_Comm_Socket.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\AndroidScreenCap.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\Android_Comm_Utils.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\argparse.c" />
-    <ClCompile Include="..\..\..\Comm\Utils\Counter_Comm_Utils.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\CRC.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\IntegerCount.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\Property_Comm_Utils.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\StringTool.cpp" />
-    <ClCompile Include="..\..\..\Comm\Utils\TxtFile_Comm_Utils.cpp" />
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClient.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPClientWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\TCP\TCPServerWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\TCP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\Monitor.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\TcpClient.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\TcpServer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\UdpClientPost.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\UdpServer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\Worker.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClient.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPClientWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServer.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerLinux.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\UDP\UDPServerWin.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\UDP\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Utils.cpp" />
+    <ClCompile Include="..\..\..\Comm\Utils\Android.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\AndroidScreenCap.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\argparse.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\ArgParser.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Convert.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Counter.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\CRC.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\IntegerCount.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\LogFile.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Property.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\StringTool.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\TxtFile.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Utils\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Utils\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\VarType.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Comm\Android.mk" />

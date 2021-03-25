@@ -3,66 +3,100 @@
 namespace Comm {
     namespace Utils {
 
+        namespace Property {
 
-        /************************************************************************************************
-        class Property
-        ************************************************************************************************/
 
-        std::shared_ptr<Property> Property::CreateObject(ValueType valueType, const char* name, const char* value) {
-        
-            std::shared_ptr<Property> prop;
+            CLASS_SINGLETON_PATTERN_IMPLEMENT_C1(CS);
 
-            switch (valueType) {
-                case ValueType::String:  prop = std::make_shared<PropertyString>(name, value); break;
+            CS::CS() {
+                _Mutex = OAL::Mutex::CreateObject(0x98299829);
+                assert(_Mutex);
             }
-            assert(prop);
 
-            return prop;
-        }
+            bool CS::Lock() {
+                _Mutex->Lock();
+                return true;
+            }
 
-        Property::Property(const char* name, ValueType valueType) :
-            _Name(name)
-            ,_ValueType(valueType)
-        {
+            bool CS::Unlock() {
+                _Mutex->Unlock();
+                return true;
+            }
 
-        }
+            bool SaveData(std::string strFileName, /*In*/const void* dataBuf, int dataSize) {
+            
+                bool bRet = false;
+                FILE* fp = fopen(strFileName.c_str(), "wb");
+                if (fp) {
+                    int wrsz = 0, verifyWrsz = 0;
+                    verifyWrsz += (int)fwrite(&dataSize, 1, sizeof(int), fp);  wrsz += sizeof(int);
+                    verifyWrsz += (int)fwrite(dataBuf, 1, dataSize, fp); wrsz += dataSize;
+                    fclose(fp);
+                    if (verifyWrsz == wrsz) {
+                        bRet = true;
+                    }
+                }
+                return bRet;
+            }
 
-        bool Property::IsThisName(const char* name) {
+            bool LoadData(std::string strFileName, /*Out*/unsigned char* dataBuf, int dataBufMaxByteSize, /*OUT*/ int* dataSize) {
+            
+                bool bRet = false;
+                int retDataSize = 0;
 
-            return _Name.compare(name) == 0 ? true : false;
-        }
+                assert(dataBuf);
 
-        std::string Property::GetName() {
-            return _Name;
-        }
+                FILE* fp = fopen(strFileName.c_str(), "rb");
+                if (fp) {
+                    int dsz = 0;
+                    int rdsz = 0, verifyRdsz = 0;
+                    
+                    //데이타 길이 읽기 
+                    verifyRdsz += (int)fread(&dsz, 1, sizeof(int), fp); rdsz += sizeof(int);
+                    if ( (dsz > 0) && (dsz <= dataBufMaxByteSize) ) {
+                        verifyRdsz += (int)fread((void*)dataBuf, 1, dsz, fp); rdsz += dsz;
+                    }
+                    else {
+                        dsz = 0;
+                        memset(dataBuf, 0x00, dataBufMaxByteSize);
+                    }
+                    fclose(fp);
 
-        /************************************************************************************************
-        class PropertyString
-        ************************************************************************************************/
-        PropertyString::PropertyString(const char* name, const char* value) :
-            Property(name, ValueType::String)
-            ,_Value(value?value:"")
-        {
+                    if (rdsz == verifyRdsz) {
+                        bRet = true;
+                        retDataSize = dsz;
+                    }
+                }
 
-        }
+                if (dataSize) *dataSize = retDataSize;
 
+                return bRet;
+            }
 
-        bool PropertyString::SetValueString(const char* value) {
-            _Value = value;
-            return true;
-        }
+            bool SaveString(std::string strFileName, std::string strValue) {
 
-        bool PropertyString::SetValueString(std::string strValue) {
-            _Value = strValue;
-            return true;
-        }
+                return SaveData(strFileName, (const void*)strValue.c_str(), (int)strValue.size());
+            }
+
+            std::string LoadString(std::string strFileName) {
                 
-        std::string PropertyString::GetValueString() {
-            return _Value;
+                bool bRet;
+                int dataSize;
+                std::string strValue;
+                char* szBuf = new char[4096];
+                assert(szBuf);
+
+                bRet = LoadData(strFileName, (unsigned char*)szBuf, 4096, &dataSize);
+                if (bRet) {
+                    szBuf[dataSize] = '\0';
+                    strValue = szBuf;
+                }
+
+                delete[] szBuf;
+                return strValue;
+            }
         }
 
-        long long PropertyString::GetValueLongLong() {
-            return atoll(_Value.c_str());
-        }
+
     };
 };

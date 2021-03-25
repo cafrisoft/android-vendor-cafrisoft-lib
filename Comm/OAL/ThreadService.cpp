@@ -3,9 +3,33 @@
 namespace Comm {
     namespace OAL {
 
-        IThreadService::~IThreadService() {
+        IThreadService::IThreadService() :
+            _TotalReceivedPacketCount(0)
+            , _ReceivedPacketCount(0)
+        {
+
+        }
+
+        IThreadService::~IThreadService() 
+        {
         
         }
+
+        long long IThreadService::GetTotalReceivedPacketCount() {
+
+            return _TotalReceivedPacketCount;
+        }
+
+        long long IThreadService::GetReceivedPacketCount() {
+
+            return _ReceivedPacketCount;
+        }
+
+        void IThreadService::ResetReceivedPacketCount() {
+            _ReceivedPacketCount = 0;
+        }
+
+
 
         ThreadService::ThreadService(IThreadService* pService) :
             _IThreadService(pService)

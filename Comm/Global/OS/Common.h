@@ -15,6 +15,7 @@
 #include <memory>
 #include <string>
 #include <stdexcept>
+#include <map>
 #endif
 
 #endif

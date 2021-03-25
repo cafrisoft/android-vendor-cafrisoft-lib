@@ -131,6 +131,7 @@ namespace Comm {
                                 FD_CLR(sock_fd, &_NewFDSet);
                                 this->SelectCloseCallback(_ClientArray[sock_fd]);
                                 _ClientArray[sock_fd].reset();
+                                _ClientArray[sock_fd] = NULL;
                             }
                             else
                             {

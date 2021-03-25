@@ -85,7 +85,8 @@ namespace Comm {
             /*
               Ansi => Utf8
             */
-            static std::string AnsiToUTF8(std::string strIn);
+            static std::string AnsiToUtf8(std::string strIn);
+            static std::string Utf8ToAnsi(std::string strIn);
             static std::string  SplitFileName(std::string strPathFileName); // 입력된 전체 파일명에서 파일이름만 뽑아낸다. ex) "c:\mylib\aa.dat" => "aa"
         };
 

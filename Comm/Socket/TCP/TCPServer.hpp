@@ -28,10 +28,16 @@ namespace Comm {
                     void* arg;
                 };
 
+                static const int _CliSockID_BroadCast = 0xFFFF;
+                static const int _CliSockID_Invalid = -1;
+
             public:
                 static std::shared_ptr<Server> CreateObject(struct CreateConfig cfg);
             
             private:
+                std::shared_ptr<Comm::OAL::CriticalSection> _Cs_CliSock;
+
+
                 struct CreateConfig _CreateConfig;
                 long long _ServerStartTick;
 
@@ -81,6 +87,8 @@ namespace Comm {
 
                 virtual bool Broadcast(const unsigned char* data, int dataSize);
                 virtual bool Broadcast(std::shared_ptr<NetPacket> pack);
+                virtual bool Send(int cliSockID, const unsigned char* data, int dataSize);
+                virtual bool Send(int cliSockID, std::shared_ptr<NetPacket> pack);
             };
 
         }; //namespace TCP

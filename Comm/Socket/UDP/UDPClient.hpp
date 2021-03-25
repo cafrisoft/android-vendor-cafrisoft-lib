@@ -12,7 +12,7 @@ namespace Comm {
             class Client : public Base::Object {
                 
             public:
-                static std::shared_ptr<Client> CreateObject(const char* serverAddr, int portNum);
+                static std::shared_ptr<Client> CreateObject(std::string serverAddr, int portNum);
 
             private:
                 char _ServerAddr[128];

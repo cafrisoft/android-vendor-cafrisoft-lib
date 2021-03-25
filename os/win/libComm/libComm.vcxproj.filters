@@ -85,11 +85,11 @@
     <Filter Include="Comm\Draw2D\Txt">
       <UniqueIdentifier>{9c82b17a-ed03-4f1e-9c5c-dbb649b736d6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Comm\Database">
-      <UniqueIdentifier>{6fd3cb14-0c1b-45b8-90d5-baf7665bb4c1}</UniqueIdentifier>
+    <Filter Include="Comm\Socket\Toss">
+      <UniqueIdentifier>{e0765dfa-eb6c-4abc-9147-6e3f8c1a5637}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Comm\Database\RDBMS">
-      <UniqueIdentifier>{f28023d4-fcf9-46eb-a111-71d8e659b386}</UniqueIdentifier>
+    <Filter Include="Comm\Socket\End">
+      <UniqueIdentifier>{58830660-5d82-47a9-8505-1a3069c1acc4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -184,9 +184,6 @@
       <Filter>Comm\Socket\UDP</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPClientWin.hpp">
-      <Filter>Comm\Socket\UDP</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPPClient.hpp">
       <Filter>Comm\Socket\UDP</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Comm\Socket\UDP\UDPServer.hpp">
@@ -345,12 +342,6 @@
     <ClInclude Include="..\..\..\Comm\Draw2D\Txt\FreeType.hpp">
       <Filter>Comm\Draw2D\Txt</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Comm\Database\RDBMS\Product.hpp">
-      <Filter>Comm\Database\RDBMS</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Comm\Database\RDBMS\MySQL.hpp">
-      <Filter>Comm\Database\RDBMS</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Comm\Socket\Utils.hpp">
       <Filter>Comm\Socket\AAAAA-Packet</Filter>
     </ClInclude>
@@ -359,6 +350,42 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Comm\Utils\argparse.h">
       <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\LogFile.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\UdpServer.hpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\Worker.hpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\TcpClient.hpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\TcpServer.hpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\ArgParser.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\End\TcpServer.hpp">
+      <Filter>Comm\Socket\End</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\End\TcpMultiServer.hpp">
+      <Filter>Comm\Socket\End</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\Monitor.hpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\UdpClientPost.hpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Utils\Convert.hpp">
+      <Filter>Comm\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\VarType.hpp">
+      <Filter>Comm\AAAAA</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -515,16 +542,10 @@
     <ClCompile Include="..\..\..\Comm\OAL\MutexWin.cpp">
       <Filter>Comm\OAL</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Comm\OAL\Mutex_Comm_OAL.cpp">
-      <Filter>Comm\OAL</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Comm\OAL\MutexLinux.cpp">
       <Filter>Comm\OAL</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\OAL\CondWin.cpp">
-      <Filter>Comm\OAL</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Comm\OAL\Cond_Comm_OAL.cpp">
       <Filter>Comm\OAL</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\OAL\CondLinux.cpp">
@@ -532,9 +553,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\Property\System_Comm_Property.cpp">
       <Filter>Comm\Property</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Comm\Utils\Property_Comm_Utils.cpp">
-      <Filter>Comm\Utils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\OAL\SemaphoreWin.cpp">
       <Filter>Comm\OAL</Filter>
@@ -545,23 +563,14 @@
     <ClCompile Include="..\..\..\Comm\OAL\SemaphoreLinux.cpp">
       <Filter>Comm\OAL</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Comm\Utils\Android_Comm_Utils.cpp">
-      <Filter>Comm\Utils</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexLinux.cpp">
       <Filter>Comm\OAL</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\OAL\ProcessMutexWin.cpp">
       <Filter>Comm\OAL</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutex_Comm_OAL.cpp">
-      <Filter>Comm\OAL</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Comm\Property\Path_Comm_Property.cpp">
       <Filter>Comm\Property</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Comm\Utils\Counter_Comm_Utils.cpp">
-      <Filter>Comm\Utils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\Draw2D\File\Bmp_Comm_Draw2D_File.cpp">
       <Filter>Comm\Draw2D\File</Filter>
@@ -569,23 +578,77 @@
     <ClCompile Include="..\..\..\Comm\Draw2D\Txt\FreeType_Comm_Draw2D_Txt.cpp">
       <Filter>Comm\Draw2D\Txt</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Comm\Database\RDBMS\Product_Comm_Database.cpp">
-      <Filter>Comm\Database\RDBMS</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Comm\Database\RDBMS\MySQL.cpp">
-      <Filter>Comm\Database\RDBMS</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Comm\Socket\Utils_Comm_Socket.cpp">
-      <Filter>Comm\Socket\AAAAA-Packet</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Comm\Utils\TxtFile_Comm_Utils.cpp">
-      <Filter>Comm\Utils</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Comm\Utils\argparse.c">
       <Filter>Comm\Utils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\Utils\AndroidScreenCap.cpp">
       <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\TxtFile.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Property.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Counter.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Android.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\LogFile.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Utils.cpp">
+      <Filter>Comm\Socket\AAAAA-Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\UdpServer.cpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\Worker.cpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\TcpClient.cpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\TcpServer.cpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Cond.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\EventWin.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Event.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\Mutex.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\OAL\ProcessMutex.cpp">
+      <Filter>Comm\OAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\ArgParser.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\End\TcpServer.cpp">
+      <Filter>Comm\Socket\End</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\End\TcpMultiServer.cpp">
+      <Filter>Comm\Socket\End</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\Monitor.cpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\UdpClientPost.cpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Utils\Convert.cpp">
+      <Filter>Comm\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\VarType.cpp">
+      <Filter>Comm\AAAAA</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

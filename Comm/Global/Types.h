@@ -41,6 +41,16 @@ enum class VarType {
 };
 #endif
 
+struct CommDateTime {
+    int _Year;
+    int _Month;
+    int _Day;
+    int _Hour;
+    int _Minute;
+    int _Second;
+    int _MileSec;
+};
+
 
 #endif
 

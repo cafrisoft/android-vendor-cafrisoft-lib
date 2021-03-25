@@ -28,6 +28,9 @@ namespace Comm {
 
             Server::Server(struct CreateConfig cfg) 
             {
+                _Cs_CliSock = Comm::OAL::CriticalSection::CreateObject();
+                assert(_Cs_CliSock);
+
                 memcpy(&_CreateConfig, &cfg, sizeof(cfg));
                 _LogTimer = OAL::Timer::CreateObject(this, TimerID::Log, 1000/*tick*/, false/*defaultStart*/);
 
@@ -54,11 +57,15 @@ namespace Comm {
 
             int Server::GetConnectedClientCount() {
             
+                Comm::OAL::Lock loc(_Cs_CliSock);
+
                 return (int)_ClientVector.size();
             }
 
             std::vector<int> Server::GetConnectedHubIDVector() {
             
+                Comm::OAL::Lock loc(_Cs_CliSock);
+
                 std::vector<int> vecID;
 
                 for (std::vector<std::shared_ptr<Client>>::const_iterator it = _ClientVector.cbegin(); it != _ClientVector.cend(); ++it) {
@@ -75,12 +82,16 @@ namespace Comm {
                     _CreateConfig._AcceptFunc(_CreateConfig.arg, cliSock);
                 }
 
+                _Cs_CliSock->Lock();
                 _ClientVector.push_back(cliSock);
+                _Cs_CliSock->Unlock();
+
             }
 
 
             void Server::SelectReceiveCallback(std::shared_ptr<Client> cliSock, const unsigned char* data, int dataSize) {
 
+                
                 if (_CreateConfig._ReceiveFunc) {
                     _CreateConfig._ReceiveFunc(_CreateConfig.arg, cliSock, data, dataSize);
                 }
@@ -96,6 +107,7 @@ namespace Comm {
                 }
 
 
+                _Cs_CliSock->Lock();
                 for (std::vector<std::shared_ptr<Client>>::iterator it = _ClientVector.begin(); it != _ClientVector.end(); ++it) {
                     std::shared_ptr<Client> cli = *it;
                     if (cli->GetID() == cliSock->GetID()) {
@@ -103,6 +115,7 @@ namespace Comm {
                         break;
                     }
                 }
+                _Cs_CliSock->Unlock();
             }
 
             void Server::SelectLoop(bool isInternalThreadRun) {
@@ -148,6 +161,8 @@ namespace Comm {
 
             bool Server::Broadcast(const unsigned char* data, int dataSize) {
             
+                Comm::OAL::Lock loc(_Cs_CliSock);
+
                 for (std::vector<std::shared_ptr<Client>>::const_iterator it = _ClientVector.cbegin(); it != _ClientVector.cend(); ++it) {
                     std::shared_ptr<Client> cli = *it;
                     cli->Send(data, dataSize);
@@ -159,12 +174,42 @@ namespace Comm {
             bool Server::Broadcast(std::shared_ptr<NetPacket> pack) {
             
                 bool bRet;
-                int packByteSize = pack->GetByteSize();
+                int packByteSize = pack->GetBufByteSize();
                 unsigned char* packData = new unsigned char[packByteSize];
                 assert(packData);
 
                 pack->GetNetPacketData(packData);
                 bRet = this->Broadcast(packData, packByteSize);
+
+                delete[] packData;
+
+                return bRet;
+            }
+
+            bool Server::Send(int cliSockID, const unsigned char* data, int dataSize) {
+            
+                Comm::OAL::Lock loc(_Cs_CliSock);
+
+                for (std::vector<std::shared_ptr<Client>>::const_iterator it = _ClientVector.cbegin(); it != _ClientVector.cend(); ++it) {
+                    std::shared_ptr<Client> cli = *it;
+                    if (cli->GetID() == cliSockID) {
+                        cli->Send(data, dataSize);
+                        break;
+                    }
+                }
+
+                return true;
+            }
+
+            bool Server::Send(int cliSockID, std::shared_ptr<NetPacket> pack) {
+            
+                bool bRet;
+                int packByteSize = pack->GetBufByteSize();
+                unsigned char* packData = new unsigned char[packByteSize];
+                assert(packData);
+
+                pack->GetNetPacketData(packData);
+                bRet = this->Send(cliSockID, packData, packByteSize);
 
                 delete[] packData;
 

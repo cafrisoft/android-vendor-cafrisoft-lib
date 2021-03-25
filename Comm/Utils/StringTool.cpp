@@ -583,7 +583,7 @@ namespace Comm {
                     break;
                 }
 
-                num += a * pow(26, p);
+                num += a * (int)pow(26, p);
             }
 
             return num;
@@ -770,10 +770,10 @@ namespace Comm {
         }
 
 #if (CommOS==CommOS_WIN)
-        std::string StringTool::AnsiToUTF8(std::string strIn) {
+        std::string StringTool::AnsiToUtf8(std::string strIn) {
       
-            std::string strUTF8;
-            int nLenOfUni =0, nLenOfUTF=0;
+            std::string strUtf8;
+            int nLenOfUni =0, nLenOfUtf8=0;
             wchar_t* us = NULL;
             char* pszOut = NULL;
 
@@ -790,32 +790,75 @@ namespace Comm {
                 // ansi ---> unicode
                 nLenOfUni = MultiByteToWideChar(CP_ACP, 0, strIn.c_str(), (int)strIn.length(), us, nLenOfUni);
 
-                if ((nLenOfUTF = WideCharToMultiByte(CP_UTF8, 0, us, nLenOfUni, NULL, 0, NULL, NULL)) <= 0)
+                if ((nLenOfUtf8 = WideCharToMultiByte(CP_UTF8, 0, us, nLenOfUni, NULL, 0, NULL, NULL)) <= 0)
                 {
                     /*Nothing to do */
                 }
                 else {
-                    pszOut = new char[nLenOfUTF + 1];
-                    memset(pszOut, 0x00, sizeof(char) * (nLenOfUTF + 1));
+                    pszOut = new char[nLenOfUtf8 + 1];
+                    memset(pszOut, 0x00, sizeof(char) * (nLenOfUtf8 + 1));
 
                     // unicode ---> utf8
-                    nLenOfUTF = WideCharToMultiByte(CP_UTF8, 0, us, nLenOfUni, pszOut, nLenOfUTF, NULL, NULL);
-                    pszOut[nLenOfUTF] = 0;
-                    strUTF8 = pszOut;
+                    nLenOfUtf8 = WideCharToMultiByte(CP_UTF8, 0, us, nLenOfUni, pszOut, nLenOfUtf8, NULL, NULL);
+                    pszOut[nLenOfUtf8] = 0;
+                    strUtf8 = pszOut;
                 }
             }
 
             if(us) delete[] us;
             if(pszOut) delete[] pszOut;
 
-            return strUTF8;
+            return strUtf8;
+        }
+
+        std::string StringTool::Utf8ToAnsi(std::string strIn) {
+
+            std::string strAnsi;
+            int nLenOfUni = 0, nLenOfAnsi = 0;
+            wchar_t* wbuf = NULL;
+            char* ansiBuf = NULL;
+
+            if ((nLenOfUni = MultiByteToWideChar(CP_UTF8, 0, strIn.c_str(), (int)strIn.length(), NULL, 0)) <= 0) {
+
+                /*Nothing to do */
+
+            }
+            else {
+                wbuf = new wchar_t[nLenOfUni + 1];
+                memset(wbuf, 0x00, sizeof(wchar_t) * (nLenOfUni + 1));
+
+                // ansi ---> unicode
+                nLenOfUni = MultiByteToWideChar(CP_UTF8, 0, strIn.c_str(), (int)strIn.length(), wbuf, nLenOfUni);
+
+                if ((nLenOfAnsi = WideCharToMultiByte(CP_ACP, 0, wbuf, nLenOfUni, NULL, 0, NULL, NULL)) <= 0)
+                {
+                    /*Nothing to do */
+                }
+                else {
+                    ansiBuf = new char[nLenOfAnsi + 1];
+                    memset(ansiBuf, 0x00, sizeof(char) * (nLenOfAnsi + 1));
+
+                    // unicode ---> utf8
+                    nLenOfAnsi = WideCharToMultiByte(CP_ACP, 0, wbuf, nLenOfUni, ansiBuf, nLenOfAnsi, NULL, NULL);
+                    ansiBuf[nLenOfAnsi] = 0;
+                    strAnsi = ansiBuf;
+                }
+        }
+
+            if (wbuf) delete[] wbuf;
+            if (ansiBuf) delete[] ansiBuf;
+
+            return strAnsi;
         }
 #else
 
-        std::string StringTool::AnsiToUTF8(std::string strIn) {
+        std::string StringTool::AnsiToUtf8(std::string strIn) {
             return strIn;
         }
 
+        std::string StringTool::Utf8ToAnsi(std::string strIn) {
+            return strIn;
+        }
 #endif
 
 

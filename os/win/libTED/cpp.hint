@@ -1,2 +1,0 @@
-#define LIBTED_API __declspec(dllexport)
-#define LIBTED_API __declspec(dllimport)

@@ -8,17 +8,24 @@ namespace Comm {
         
         class NetPacket : public Base::Object {
 
+        protected :
+            enum {
+                _CrcByteSize = 2
+            };
         protected:
             NetPacket();
             virtual ~NetPacket();
 
         protected:
-            virtual unsigned char* GetPtr() = 0;
+            virtual unsigned char* GetBufPtr() = 0;
             virtual unsigned char* GetHeaderPtr() = 0;
             virtual unsigned char* GetPayloadPtr() = 0;
 
         public:
-            virtual int GetByteSize() = 0;  //패킷 크기값 리턴
+            virtual int GetBufByteSize() = 0;  //패킷 크기값 리턴
+            virtual void GenPacketTime() = 0;
+            virtual time_t GetUtcTime() = 0;
+            virtual int GetMileSec() = 0;
             
             //네트워크로부터 수신한 패킷데이타를 입력한다. CRC체크와 패킷크기 체크를 수행한다. 
             virtual bool SetNetPacketData(unsigned char* packData, int packDataByteSize) = 0;

@@ -45,9 +45,6 @@
     <ClInclude Include="..\..\..\Database\RDBMS\Base.hpp">
       <Filter>Database\RDBMS</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Database\VarType.hpp">
-      <Filter>Database\AAAAA</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Database\single\Record.hpp">
       <Filter>Database\Single</Filter>
     </ClInclude>
@@ -77,32 +74,29 @@
     <ClCompile Include="libDatabase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Database\RDBMS\MySQL_Database_RDBMS.cpp">
-      <Filter>Database\RDBMS</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\RDBMS\Base_Database_RDBMS.cpp">
-      <Filter>Database\RDBMS</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\VarType_Database.cpp">
-      <Filter>Database\AAAAA</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\single\Record_Database_Single.cpp">
-      <Filter>Database\Single</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\single\Table_Database_Single.cpp">
-      <Filter>Database\Single</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\single\Column_Database_Single.cpp">
-      <Filter>Database\Single</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\single\Data_Database_Single.cpp">
-      <Filter>Database\Single</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\single\Header_Database_Single.cpp">
-      <Filter>Database\Single</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Database\Join\List_Database_Join.cpp">
+    <ClCompile Include="..\..\..\Database\Join\List.cpp">
       <Filter>Database\Join</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\RDBMS\Base.cpp">
+      <Filter>Database\RDBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\RDBMS\MySQL.cpp">
+      <Filter>Database\RDBMS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Record.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Table.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Column.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Data.cpp">
+      <Filter>Database\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Header.cpp">
+      <Filter>Database\Single</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

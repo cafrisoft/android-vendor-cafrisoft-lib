@@ -24,6 +24,7 @@
 #include <time.h>
 #include <semaphore.h>
 
+
 #ifdef __cplusplus
 #define COMM_API extern "C" 
 
@@ -31,15 +32,8 @@
 #define COMM_API extern
 #endif
 
-#define STDC_FSEEK64  fseeko
-#define STDC_FTELL64  ftello
-
-#if (ANDROID_PLATFORM_SDK_VERSION == 28)
-#define ANDROID_MAJOR_VERSION 9
-#else
-#define ANDROID_MAJOR_VERSION 0
-#endif
-
+#define C_FSEEK64  fseeko
+#define C_FTELL64  ftello
 
 #endif
 

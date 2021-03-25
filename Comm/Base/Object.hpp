@@ -16,9 +16,20 @@ namespace Base {
 
     class Object {
 
+    protected:
+        time_t _InstStartTime;
+        long long _InstStartTick;
+        long long _InstBeforeTick;
+        long long _InstCurTick;
+
     public:
         Object();
         virtual ~Object();
+
+        time_t GetInstStartTime();
+        long long GetInstStartTick();
+        long long GetInstRunningTick();
+        long long GetInstRunningSecond();
 
         /*
             다른 객체에서 자신을 CallBack 호출시키기 위한 Callback 함수 

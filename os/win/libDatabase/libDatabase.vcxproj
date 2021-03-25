@@ -163,19 +163,41 @@
     <ClInclude Include="..\..\..\Database\single\Header.hpp" />
     <ClInclude Include="..\..\..\Database\single\Record.hpp" />
     <ClInclude Include="..\..\..\Database\single\Table.hpp" />
-    <ClInclude Include="..\..\..\Database\VarType.hpp" />
     <ClInclude Include="framework.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Database\Join\List_Database_Join.cpp" />
-    <ClCompile Include="..\..\..\Database\RDBMS\Base_Database_RDBMS.cpp" />
-    <ClCompile Include="..\..\..\Database\RDBMS\MySQL_Database_RDBMS.cpp" />
-    <ClCompile Include="..\..\..\Database\single\Column_Database_Single.cpp" />
-    <ClCompile Include="..\..\..\Database\single\Data_Database_Single.cpp" />
-    <ClCompile Include="..\..\..\Database\single\Header_Database_Single.cpp" />
-    <ClCompile Include="..\..\..\Database\single\Record_Database_Single.cpp" />
-    <ClCompile Include="..\..\..\Database\single\Table_Database_Single.cpp" />
-    <ClCompile Include="..\..\..\Database\VarType_Database.cpp" />
+    <ClCompile Include="..\..\..\Database\Join\List.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Join\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Join\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\RDBMS\Base.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)RDBMS\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)RDBMS\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\RDBMS\MySQL.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)RDBMS\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)RDBMS\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Column.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Single\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Single\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Data.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Single\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Single\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Header.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Single\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Single\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Record.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Single\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Single\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Database\Single\Table.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Single\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Single\</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="libDatabase.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

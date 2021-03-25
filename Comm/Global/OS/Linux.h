@@ -36,9 +36,9 @@
 #define COMM_API extern
 #endif
 
-#define STDC_FSEEK64  fseeko
-#define STDC_FTELL64  ftello
-
+#define C_FSEEK64  fseeko
+#define C_FTELL64  ftello
+#define C_ABS64  llabs
 
 #endif
 

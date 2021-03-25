@@ -132,6 +132,42 @@ namespace Comm {
             return GetUtcTime_KST(year, month, day, hour, min, sec);
         }
 
+        // ex) yyyyMmDd:20201119, hhMmSs:194224 
+        time_t DateTime::GetUtcTime_KST_YYYYMMDD_HHMMSS(int yyyyMmDd, int hhMmSs) {
+            
+            int year, month, day, hour, min, sec;
+            
+            //year
+            year = yyyyMmDd / 10000;
+            assert((year >= 1900) && (year <= 2999));
+
+            //month;
+            month = (yyyyMmDd / 100) % 100;
+            assert((month >= 1) && (month <= 12));
+
+            //day
+            day = yyyyMmDd % 100;
+            assert((day >= 1) && (day <= 31));
+
+            //hour
+            hour = hhMmSs / 10000;
+            assert((hour >= 0) && (hour < 24));
+
+            //min
+            min = (hhMmSs / 100) % 100;
+            assert((min >= 0) && (min < 60));
+
+            //sec
+            sec = hhMmSs % 100;
+            assert((sec >= 0) && (sec < 60));
+            
+            return GetUtcTime_KST(year, month, day, hour, min, sec);
+        }
+
+        time_t DateTime::GetUtcTime_KST_YYYYMMDD(int yyyyMmDd) {
+            return GetUtcTime_KST_YYYYMMDD_HHMMSS(yyyyMmDd, 0);
+        }
+
         int DateTime::GetUtcYear(time_t utcTime) {
         
             ASSERT_CHECK_TIME_T_64BIT;
@@ -163,7 +199,10 @@ namespace Comm {
             ASSERT_CHECK_TIME_T_64BIT;
 
             struct tm* tm = gmtime((const time_t*)&utcTime);
-            return tm->tm_mday;
+            int day = tm->tm_mday;
+            assert((day >= 1) && (day <= 31));
+
+            return day;
         }
 
         int DateTime::GetUtcHour(time_t utcTime) {
@@ -171,7 +210,10 @@ namespace Comm {
             ASSERT_CHECK_TIME_T_64BIT;
 
             struct tm* tm = gmtime((const time_t*)&utcTime);
-            return tm->tm_hour;
+            int hour = tm->tm_hour;
+            assert((hour >= 0) && (hour < 24));
+
+            return hour;
         }
 
         int DateTime::GetUtcMinute(time_t utcTime) {
@@ -179,7 +221,9 @@ namespace Comm {
             ASSERT_CHECK_TIME_T_64BIT;
 
             struct tm* tm = gmtime((const time_t*)&utcTime);
-            return tm->tm_min;
+            int minute = tm->tm_min;
+            assert((minute >= 0) && (minute < 60));
+            return minute;
         }
 
         int DateTime::GetUtcSecond(time_t utcTime) {
@@ -187,7 +231,9 @@ namespace Comm {
             ASSERT_CHECK_TIME_T_64BIT;
 
             struct tm* tm = gmtime((const time_t*)&utcTime);
-            return tm->tm_sec;
+            int second = tm->tm_sec;
+            assert((second >= 0) && (second < 60));
+            return second;
         }
 
         std::string DateTime::GetUtcTimeString(time_t utcTime) {
@@ -205,6 +251,37 @@ namespace Comm {
 
             std::string str = buf;
             return str;
+        }
+
+        struct CommDateTime DateTime::GetUtcCommDateTime(time_t utcTime) {
+        
+            struct CommDateTime dt;
+            
+            ASSERT_CHECK_TIME_T_64BIT;
+
+            struct tm* tm = gmtime((const time_t*)&utcTime);
+
+            dt._Year = DATETIME_TMYEAR_TO_GMTYEAR(tm->tm_year);
+            assert(dt._Year >= 1970);
+
+            dt._Month = DATETIME_TMMONTH_TO_GMTMONTH(tm->tm_mon);
+            assert((dt._Month >= 1) && (dt._Month <= 12));
+
+            dt._Day = tm->tm_mday;
+            assert((dt._Day >= 1) && (dt._Day <= 31));
+
+            dt._Hour = tm->tm_hour;
+            assert((dt._Hour >= 0) && (dt._Hour < 24));
+
+            dt._Minute = tm->tm_min;
+            assert((dt._Minute >= 0) && (dt._Minute < 60));
+
+            dt._Second = tm->tm_sec;
+            assert((dt._Second >= 0) && (dt._Second < 60));
+
+            dt._MileSec = 0;
+
+            return dt;
         }
 
         int DateTime::GetLocalYear(time_t utcTime) {
@@ -287,6 +364,41 @@ namespace Comm {
 
         int DateTime::GetKstSecond(time_t utcTime) {
             return DateTime::GetUtcSecond(utcTime + KST_OFFSET);
+        }
+
+        struct CommDateTime DateTime::GetKstCommDateTime(time_t utcTime) {
+        
+            return DateTime::GetUtcCommDateTime(utcTime + KST_OFFSET);
+        }
+
+        //return format YYYYMMDD
+        int DateTime::GetKstYYYYMMDD(time_t utcTime) {
+        
+            int year = DateTime::GetKstYear(utcTime);
+            int month = DateTime::GetKstMonth(utcTime);
+            int day = DateTime::GetKstDay(utcTime);
+            int value = 0;
+
+            value += year * 10000;
+            value += month * 100;
+            value += day;
+
+            return value;
+        }
+
+        //return format HHMMSS
+        int DateTime::GetKstHHMMSS(time_t utcTime) {
+        
+            int hour = DateTime::GetKstHour(utcTime);
+            int minute = DateTime::GetKstMinute(utcTime);
+            int second = DateTime::GetKstSecond(utcTime);
+            int value = 0;
+
+            value += hour * 10000;
+            value += minute * 100;
+            value += second;
+
+            return value;
         }
 
         std::string DateTime::GetKstDateString(time_t utcTime) {

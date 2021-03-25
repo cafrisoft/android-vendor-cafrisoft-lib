@@ -1,5 +1,7 @@
+#define CLOG_TAG "SocketNetPacket"
 #include <Comm/Socket/NetPacket.hpp>
 #include <Comm/Utils/HeaderFiles.hpp>
+#include <Comm/OAL/Log.hpp>
 
 namespace Comm {
     namespace Socket {
@@ -13,12 +15,16 @@ namespace Comm {
         }
                 
         bool NetPacket::GenCRC() {
-            return NetPacket::GenCRC(this->GetPtr(), this->GetByteSize());
+
+            bool bRet;
+
+            bRet = NetPacket::GenCRC(this->GetBufPtr(), this->GetBufByteSize());
+            return bRet;
         }
 
         bool NetPacket::GetNetPacketData(unsigned char* packData) {
             
-            memcpy(packData, this->GetPtr(), this->GetByteSize());
+            memcpy(packData, this->GetBufPtr(), this->GetBufByteSize());
             return true;
         }
 

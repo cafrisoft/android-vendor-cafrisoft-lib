@@ -7,13 +7,13 @@ namespace Comm {
     namespace Socket {
         namespace UDP {
 
-            std::shared_ptr<Client> Client::CreateObject(const char* serverAddr, int portNum) {
+            std::shared_ptr<Client> Client::CreateObject(std::string serverAddr, int portNum) {
 
                 std::shared_ptr<Client> obj;
 #if (CommOS==CommOS_WIN)
-                obj = std::make_shared<ClientWin>(serverAddr, portNum);
+                obj = std::make_shared<ClientWin>(serverAddr.c_str(), portNum);
 #elif (CommOS==CommOS_LINUX || CommOS==CommOS_ANDROID)
-                obj = std::make_shared<ClientLinux>(serverAddr, portNum);
+                obj = std::make_shared<ClientLinux>(serverAddr.c_str(), portNum);
 #else
 #error "OS is not defined"
 #endif
@@ -67,7 +67,7 @@ namespace Comm {
                 OAL::Lock lock(_CriticalSectionSendData);
 
                 bool bRet;
-                int packByteSize = pack->GetByteSize();
+                int packByteSize = pack->GetBufByteSize();
                 unsigned char* packData = new unsigned char[packByteSize];
                 assert(packData);
 

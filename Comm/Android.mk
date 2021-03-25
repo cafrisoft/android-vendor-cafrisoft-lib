@@ -4,7 +4,7 @@ LOCAL_PATH:= $(call my-dir)
 # TESysNet Shared Lib
 ##########################################################################################################
 include $(CLEAR_VARS)
-#include $(LOCAL_PATH)/../AndroidBuildCommon.mk
+include $(LOCAL_PATH)/../AndroidBuildCommon.mk
 
 BASE_SRC = \
     Base/Object.cpp
@@ -15,14 +15,14 @@ DATAEX_SRC = \
     DataEx/Exchanger.cpp 
 
 OAL_SRC = \
-    OAL/Cond_Comm_OAL.cpp  OAL/CondLinux.cpp \
+    OAL/Cond.cpp  OAL/CondLinux.cpp \
     OAL/CriticalSection.cpp  OAL/CriticalSectionLinux.cpp \
     OAL/DateTimeComm.cpp \
     OAL/FileSysComm.cpp OAL/FileSysLinux.cpp \
     OAL/Lock.cpp \
     OAL/Log.cpp OAL/LogAndroid.cpp \
-    OAL/Mutex_Comm_OAL.cpp OAL/MutexLinux.cpp \
-    OAL/ProcessMutex_Comm_OAL.cpp OAL/ProcessMutexLinux.cpp \
+    OAL/Mutex.cpp OAL/MutexLinux.cpp \
+    OAL/ProcessMutex.cpp OAL/ProcessMutexLinux.cpp \
     OAL/Semaphore.cpp  OAL/SemaphoreLinux.cpp \
     OAL/SyncObject.cpp \
     OAL/SystemComm.cpp OAL/SystemLinux.cpp \
@@ -32,25 +32,31 @@ OAL_SRC = \
     
 
 SOCKET_TCP_SRC = \
-    Socket/TCP/TCPClient.cpp  Socket/TCP/TCPClientLinux.cpp  \
-    Socket/TCP/TCPServer.cpp  Socket/TCP/TCPServerLinux.cpp  
+    Socket/TCP/TCPClient.cpp  \
+    Socket/TCP/TCPClientLinux.cpp  \
+    Socket/TCP/TCPServer.cpp  \
+    Socket/TCP/TCPServerLinux.cpp  
+
 
 SOCKET_UDP_SRC = \
-    Socket/UDP/UDPClient.cpp  Socket/UDP/UDPClientLinux.cpp  \
-    Socket/UDP/UDPServer.cpp  Socket/UDP/UDPServerLinux.cpp  
+    Socket/UDP/UDPClient.cpp  \
+    Socket/UDP/UDPClientLinux.cpp  \
+    Socket/UDP/UDPServer.cpp  \
+    Socket/UDP/UDPServerLinux.cpp  
+
 
 NET_PACKET_SRC = \
     Socket/NetPacket.cpp Socket/NetPacketFixed.cpp
 
 UTILS_SRC= \
-    Utils/Android_Comm_Utils.cpp \
+    Utils/Android.cpp \
     Utils/AndroidScreenCap.cpp \
-    Utils/Counter_Comm_Utils.cpp \
+    Utils/Counter.cpp \
     Utils/CRC.cpp \
     Utils/IntegerCount.cpp  \
-    Utils/Property_Comm_Utils.cpp  \
+    Utils/Property.cpp  \
     Utils/StringTool.cpp \
-    Utils/TxtFile_Comm_Utils.cpp
+    Utils/TxtFile.cpp
 
 NETUTILS_SRC= \
     NetUtils/FTPClient.cpp  NetUtils/FTPClient_libftp.cpp
@@ -71,11 +77,6 @@ LOCAL_SRC_FILES:= \
 #LOCAL_C_INCLUDES:= \
 #      $(TESYS_INC_TOP)
 
-TESYS_INC_TOP := $(LOCAL_PATH)/..
-LOCAL_C_INCLUDES:= $(TESYS_INC_TOP)
-LOCAL_CFLAGS += -DANDROID
-LOCAL_CFLAGS += -DANDROID_PLATFORM_SDK_VERSION=$(PLATFORM_SDK_VERSION)
-
 #LOCAL_CFLAGS += -fno-stack-protector
 #LOCAL_CFLAGS += -Wall
 #LOCAL_CFLAGS += -Wno-order
@@ -89,9 +90,8 @@ LOCAL_SHARED_LIBRARIES := \
         libcutils            \
         libnetutils          \
         libui               \
-        libgui \
-        liblog
+        libgui
         
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE:= libCafriComm
+LOCAL_MODULE:= libTESysComm
 include $(BUILD_SHARED_LIBRARY)

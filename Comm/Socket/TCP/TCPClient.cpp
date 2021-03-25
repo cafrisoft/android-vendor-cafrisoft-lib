@@ -77,7 +77,7 @@ namespace Comm {
             bool Client::Send(std::shared_ptr<NetPacket> pack) {
             
                 bool bRet;
-                int packByteSize = pack->GetByteSize();
+                int packByteSize = pack->GetBufByteSize();
                 unsigned char* packData = new unsigned char[packByteSize];
                 assert(packData);
 
@@ -93,7 +93,7 @@ namespace Comm {
             
                 bool bRet = false;
                 int rcvByteSize = 0;
-                int packByteSize = pack->GetByteSize();
+                int packByteSize = pack->GetBufByteSize();
                 unsigned char* buf = new unsigned char[packByteSize];
                 assert(buf);
 

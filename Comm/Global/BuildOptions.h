@@ -8,9 +8,7 @@
 #define CommOS_LINUX   2
 #define CommOS_ANDROID 3
 
-#if defined ANDROID
-#define CommOS CommOS_ANDROID
-#elif defined _WIN64
+#ifdef _WIN64
 #define CommOS CommOS_WIN
 #elif defined WIN32
 #define CommOS CommOS_WIN
