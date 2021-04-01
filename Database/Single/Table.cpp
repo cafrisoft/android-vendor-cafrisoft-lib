@@ -146,9 +146,9 @@ namespace Database {
             return Database::RDBMS::Base::Inst()->SelectData(_TableName, readRecord, whereRecord);
         }
 
-        bool Table::SelectInternal(std::shared_ptr<Record> readRecord, std::shared_ptr<Record> whereRecord) {
+        bool Table::SelectInternal(std::shared_ptr<Record> readRecord, std::shared_ptr<Record> whereRecord, bool isDebug) {
 
-            return Database::RDBMS::Base::Inst()->SelectData(_TableName, readRecord, whereRecord);
+            return Database::RDBMS::Base::Inst()->SelectData(_TableName, readRecord, whereRecord, isDebug);
         }
 
         std::vector<std::shared_ptr<Record>> Table::SelectRecordVecInternal(std::shared_ptr<Record> readRecord, std::shared_ptr<Record> whereRecord) {
@@ -219,11 +219,11 @@ namespace Database {
             return this->SelectInternal(record, ak);
         }
 
-        bool Table::SelectRecord(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord) {
+        bool Table::SelectRecord(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord, bool isDebug) {
 
             Comm::OAL::Lock lock(_Cs);
 
-            return this->SelectInternal(record, whereRecord);
+            return this->SelectInternal(record, whereRecord, isDebug);
         }
 
         std::vector<std::shared_ptr<Record>> Table::SelectRecordVec(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord) {

@@ -387,6 +387,9 @@
     <ClInclude Include="..\..\..\Comm\VarType.hpp">
       <Filter>Comm\AAAAA</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\SingleService.hpp">
+      <Filter>Comm\Socket\Toss</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Comm\Base\ObjectAPI.cpp">
@@ -649,6 +652,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\VarType.cpp">
       <Filter>Comm\AAAAA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\SingleService.cpp">
+      <Filter>Comm\Socket\Toss</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

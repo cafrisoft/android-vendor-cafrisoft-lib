@@ -63,6 +63,11 @@ namespace Comm {
             return kstTime;
         }
 
+        time_t DateTime::GetUtcTime_KST(struct CommDateTime dt) {
+        
+            return DateTime::GetUtcTime_KST(dt._Year, dt._Month, dt._Day, dt._Hour, dt._Minute, dt._Second);
+        }
+
         // Format ex1) 2020-11-19
         time_t DateTime::GetUtcTime_KST_SqlFmtDate(std::string strDateTime) {
 
@@ -401,6 +406,19 @@ namespace Comm {
             return value;
         }
 
+        //return format yyyyMmDdHhMmSs
+        long long DateTime::GetKst_YYYYMMDD_HHMMSS(time_t utcTime) {
+        
+            long long yyyyMmDd = (long long)GetKstYYYYMMDD(utcTime);
+            long long hhMmSs = (long long)GetKstHHMMSS(utcTime);
+            long long value;
+            
+            value = yyyyMmDd * 1000000;
+            value += hhMmSs;
+
+            return value;
+        }
+
         std::string DateTime::GetKstDateString(time_t utcTime) {
 
             ASSERT_CHECK_TIME_T_64BIT;
@@ -547,6 +565,141 @@ namespace Comm {
             return 3600 * 24;
         }
 
+        /*      
+        *             BW     Vale     BitPos
+          -----------------------------------  
+            Year   :  6bit  [0:63]   26
+            Month  :  4bit  [0:15]   22
+            Day    :  5bit  [0:31]   17
+            Hour   :  5bit  [0:31]   12  
+            Minute :  6bit  [0:63]   6
+            Second :  6bit  [0:63]   0
+        */
+        
+        #define PACK_TIME_YEAR_BASE 2010
+        #define PACK_TIME_BW_YEAR   6   //[0:60] 6bit  [0:63]   26
+        #define PACK_TIME_BW_MONTH  4   //[1:12] 4bit  [0:15]   22
+        #define PACK_TIME_BW_DAY    5   //[0:31] 5bit  [0:31]   17
+        #define PACK_TIME_BW_HOUR   5   //[0:23] 5bit  [0:31]   12  
+        #define PACK_TIME_BW_MINUTE 6   //[0:59] 6bit  [0:63]   6
+        #define PACK_TIME_BW_SECOND 6   //[0:59] 6bit  [0:63]   0
+
+        #define PACK_TIME_BITPOS_YEAR   26  //[0:60] 6bit  [0:63]   26
+        #define PACK_TIME_BITPOS_MONTH  22  //[1:12] 4bit  [0:15]   22
+        #define PACK_TIME_BITPOS_DAY    17  //[0:31] 5bit  [0:31]   17
+        #define PACK_TIME_BITPOS_HOUR   12  //[0:23] 5bit  [0:31]   12  
+        #define PACK_TIME_BITPOS_MINUTE 6   //[0:59] 6bit  [0:63]   6
+        #define PACK_TIME_BITPOS_SECOND 0   //[0:59] 6bit  [0:63]   0
+
+        #define PACK_TIME_MASK_YEAR   0x3F   //[0:60] 6bit  [0:63]   26
+        #define PACK_TIME_MASK_MONTH  0x0F   //[1:12] 4bit  [0:15]   22
+        #define PACK_TIME_MASK_DAY    0x1F   //[0:31] 5bit  [0:31]   17
+        #define PACK_TIME_MASK_HOUR   0x1F   //[0:23] 5bit  [0:31]   12  
+        #define PACK_TIME_MASK_MINUTE 0x3F   //[0:59] 6bit  [0:63]   6
+        #define PACK_TIME_MASK_SECOND 0x3F   //[0:59] 6bit  [0:63]   0
+
+        int DateTime::GetPackTime(time_t utcTime) {
+        
+            CommDateTime dt = DateTime::GetKstCommDateTime(utcTime);
+            return DateTime::GetPackTime(dt._Year, dt._Month, dt._Day, dt._Hour, dt._Minute, dt._Second);
+        }
+
+        int DateTime::GetPackTime(int kstYear, int kstMon, int kstDay, int kstHour, int kstMin, int kstSec) {
+        
+            const int PARCNT = 6;
+            const int bw[PARCNT] = { PACK_TIME_BW_YEAR, PACK_TIME_BW_MONTH, PACK_TIME_BW_DAY, PACK_TIME_BW_HOUR, PACK_TIME_BW_MINUTE, PACK_TIME_BW_SECOND };
+            const int bitpos[PARCNT] = { PACK_TIME_BITPOS_YEAR, PACK_TIME_BITPOS_MONTH, PACK_TIME_BITPOS_DAY, PACK_TIME_BITPOS_HOUR, PACK_TIME_BITPOS_MINUTE, PACK_TIME_BITPOS_SECOND };
+            const int value[PARCNT] = { kstYear- PACK_TIME_YEAR_BASE, kstMon, kstDay, kstHour, kstMin, kstSec };
+            const int mask[PARCNT] = { PACK_TIME_MASK_YEAR, PACK_TIME_MASK_MONTH, PACK_TIME_MASK_DAY, PACK_TIME_MASK_HOUR, PACK_TIME_MASK_MINUTE, PACK_TIME_MASK_SECOND };
+            int packTime = 0;
+            
+            for (int i = 0; i < PARCNT; i++) {
+                
+                int v = value[i];
+                int m = mask[i];
+                int p = bitpos[i];
+
+                v <<= p;
+                m <<= p;
+                v &= m;
+
+                packTime |= v;
+            }
+
+            return packTime;
+        }
+
+        int DateTime::GetPtYear(int packTime) {
+        
+            const int m = PACK_TIME_MASK_YEAR;
+            const int p = PACK_TIME_BITPOS_YEAR;
+            int v = (packTime >> p)& m;
+
+            return v + PACK_TIME_YEAR_BASE;
+        }
+
+        int DateTime::GetPtMonth(int packTime) {
+
+            const int m = PACK_TIME_MASK_MONTH;
+            const int p = PACK_TIME_BITPOS_MONTH;
+            int v = (packTime >> p) & m;
+
+            return v;
+        }
+
+        int DateTime::GetPtDay(int packTime) {
+
+            const int m = PACK_TIME_MASK_DAY;
+            const int p = PACK_TIME_BITPOS_DAY;
+            int v = (packTime >> p) & m;
+
+            return v;
+        }
+
+        int DateTime::GetPtHour(int packTime) {
+
+            const int m = PACK_TIME_MASK_HOUR;
+            const int p = PACK_TIME_BITPOS_HOUR;
+            int v = (packTime >> p) & m;
+
+            return v;
+        }
+
+        int DateTime::GetPtMinute(int packTime) {
+
+            const int m = PACK_TIME_MASK_MINUTE;
+            const int p = PACK_TIME_BITPOS_MINUTE;
+            int v = (packTime >> p) & m;
+
+            return v;
+        }
+
+        int DateTime::GetPtSecond(int packTime) {
+
+            const int m = PACK_TIME_MASK_SECOND;
+            const int p = PACK_TIME_BITPOS_SECOND;
+            int v = (packTime >> p) & m;
+
+            return v;
+        }
+
+        struct CommDateTime DateTime::GetPtCommDateTime(int packTime) {
+
+            struct CommDateTime dt;
+            dt._Year = DateTime::GetPtYear(packTime);
+            dt._Month = DateTime::GetPtMonth(packTime);
+            dt._Day = DateTime::GetPtDay(packTime);
+            dt._Hour = DateTime::GetPtHour(packTime);
+            dt._Minute = DateTime::GetPtMinute(packTime);
+            dt._Second = DateTime::GetPtSecond(packTime);
+            return dt;
+        }
+
+        time_t DateTime::GetPtTime(int packTime) {
+        
+            struct CommDateTime dt = DateTime::GetPtCommDateTime(packTime);
+            return DateTime::GetUtcTime_KST(dt);
+        }
 
     }; //end of namespace OAL
 }; //end of namespace Comm

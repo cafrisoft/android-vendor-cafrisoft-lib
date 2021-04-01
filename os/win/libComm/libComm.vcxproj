@@ -224,6 +224,7 @@
     <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerLinux.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\TCP\TCPServerWin.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\Toss\Monitor.hpp" />
+    <ClInclude Include="..\..\..\Comm\Socket\Toss\SingleService.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\Toss\TcpClient.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\Toss\TcpServer.hpp" />
     <ClInclude Include="..\..\..\Comm\Socket\Toss\UdpClientPost.hpp" />
@@ -450,6 +451,7 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Socket\Toss\SingleService.cpp" />
     <ClCompile Include="..\..\..\Comm\Socket\Toss\TcpClient.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)Socket\Toss\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)Socket\Toss\</ObjectFileName>

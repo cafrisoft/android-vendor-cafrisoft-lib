@@ -13,6 +13,9 @@ namespace Comm {
             int ReadInt(std::string strFileName, /*OUT*/int *err = NULL);
             int ReadInt(std::string strFileName, const char* propName, char delim, /*OUT*/int* err = NULL);
         
+            bool ReverseTopBottom(std::string strFileName);
+            bool ReverseTopBottom(std::string strFileNameFrom, std::string strFileNameTo);
+
         }; //namespace TxtFile
     }; //namespace Utils
 }; //namespace Comm

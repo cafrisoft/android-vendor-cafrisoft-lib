@@ -7,18 +7,18 @@
 */
 using namespace Comm;
 
-static void TCPServerAcceptCallBackStub(void* arg, std::shared_ptr<Socket::TCP::Client> client) {
+static void TCPServerAcceptCallBackStub(void* arg, std::shared_ptr<Comm::Socket::TCP::Client> client) {
 
     PRINTF("Accept ID=%d \n", client->GetID());
 }
 
-static void TCPServerReceiveCallBackStub(void* arg, std::shared_ptr<Socket::TCP::Client> client, const unsigned char* data, int dataSize) {
+static void TCPServerReceiveCallBackStub(void* arg, std::shared_ptr<Comm::Socket::TCP::Client> client, const unsigned char* data, int dataSize) {
 
     //PRINTF("Receive ID=%d \n", client->GetID());
     //client->Send(data, dataSize);
 }
 
-static void TCPServerCloseCallBackStub(void* arg, std::shared_ptr<Socket::TCP::Client> client) {
+static void TCPServerCloseCallBackStub(void* arg, std::shared_ptr<Comm::Socket::TCP::Client> client) {
 
     PRINTF("Close ID=%d \n", client->GetID());
 }
@@ -38,7 +38,11 @@ int main(int argc, char* argv[]) {
     assert(server);
 
     server->LogStart();
-    server->SelectLoop();
+    server->SelectLoop(true);
+
+    while (true) {
+        Comm::OAL::Thread::Sleep(1000);
+    }
     
     return 0;
 }

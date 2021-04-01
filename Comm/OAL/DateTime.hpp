@@ -26,6 +26,7 @@ namespace Comm {
             static time_t GetUtcTime();
             static time_t GetUtcTime(int utcYear, int utcMon, int utcDay, int utcHour = 0, int utcMin = 0, int utcSec = 0);
             static time_t GetUtcTime_KST(int kstYear, int kstMon, int kstDay, int kstHour = 0, int kstMin = 0, int kstSec=0);
+            static time_t GetUtcTime_KST(struct CommDateTime dt);
             static time_t GetUtcTime_KST_SqlFmtDate(std::string strDate);  // ex1) 2020-11-19
             static time_t GetUtcTime_KST_SqlFmtDateTime(std::string strDateTime);  // ex1) 2020-11-19 19:42:24
             static time_t GetUtcTime_KST_YYYYMMDD_HHMMSS(int yyyyMmDd, int hhMmSs);  // ex) yyyyMmDd:20201119, hhMmSs:194224 
@@ -60,6 +61,7 @@ namespace Comm {
             static int GetKstSecond(time_t utcTime);
             static int GetKstYYYYMMDD(time_t utcTime);  //return format YYYYMMDD
             static int GetKstHHMMSS(time_t utcTime);  //return format HHMMSS
+            static long long GetKst_YYYYMMDD_HHMMSS(time_t utcTime);  //return format yyyyMmDdHhMmSs
             static struct CommDateTime GetKstCommDateTime(time_t utcTime);
             
             static std::string GetKstDateString(time_t utcTime = DateTime::GetUtcTime());
@@ -72,6 +74,17 @@ namespace Comm {
             static int GetLocalTimeOffsetHour();
             static bool IsKstDayEqual(time_t t1, time_t t2);
             static long long GetSecondCountPerDay(); //하루에 해당하는 초값을 구한다.
+
+            static int GetPackTime(time_t utcTime);
+            static int GetPackTime(int kstYear, int kstMon, int kstDay, int kstHour = 0, int kstMin = 0, int kstSec = 0);
+            static int GetPtYear(int packTime);
+            static int GetPtMonth(int packTime);
+            static int GetPtDay(int packTime);
+            static int GetPtHour(int packTime);
+            static int GetPtMinute(int packTime);
+            static int GetPtSecond(int packTime);
+            static struct CommDateTime GetPtCommDateTime(int packTime);
+            static time_t GetPtTime(int packTime);
         };
 
 

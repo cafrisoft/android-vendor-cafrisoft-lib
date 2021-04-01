@@ -119,7 +119,50 @@ namespace Comm {
                 return value;
             }
 
+            bool ReverseTopBottom(std::string strFileName) {
+                
+                
+                std::string strWriteFileName = strFileName;
+                strWriteFileName += ".reverse";
+                            
+                return ReverseTopBottom(strFileName, strWriteFileName);
+            }
 
+            bool ReverseTopBottom(std::string strFileNameFrom, std::string strFileNameTo) {
+
+                std::vector<std::string> strVec;
+                const int BUFSIZE = (1024 * 10);
+                char* buf = new char[BUFSIZE];
+                assert(buf);
+                FILE* fp = fopen(strFileNameFrom.c_str(), "r");
+                if (fp) {
+                    while (true) {
+                        memset(buf, 0x00, BUFSIZE);
+                        char* p = fgets(buf, BUFSIZE, fp);
+                        if (p == 0) {
+                            break;
+                        }
+
+                        std::string str = Comm::Utils::StringTool::RemoveCharInString(buf);
+                        strVec.push_back(str);
+                    }
+                    fclose(fp);
+                }
+
+                fp = fopen(strFileNameTo.c_str(), "w");
+                if (fp) {
+                    for (std::vector<std::string>::const_reverse_iterator it = strVec.rbegin();
+                        it != strVec.rend();
+                        it++) {
+                        fprintf(fp, "%s \n", (*it).c_str());
+                    }
+                    fclose(fp);
+                }
+
+                delete[] buf;
+
+                return true;
+            }
 
         }; //namespace TxtFile
     }; //namespace Utils

@@ -43,7 +43,7 @@ namespace Database {
             virtual bool SelectWithPKInternal(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord);
             virtual bool SelectInternal(std::shared_ptr<Record> record, unsigned int ak);
             virtual bool SelectInternal(std::shared_ptr<Record> record, long long ak);
-            virtual bool SelectInternal(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord);
+            virtual bool SelectInternal(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord, bool isDebug=false);
             virtual std::vector<std::shared_ptr<Record>> SelectRecordVecInternal(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord);
             virtual bool UpdateInternal(std::shared_ptr<Record> record, unsigned int ak);
             virtual bool UpdateInternal(std::shared_ptr<Record> record, long long ak);
@@ -56,7 +56,7 @@ namespace Database {
             virtual bool SelectWithPK(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord);
             virtual bool SelectRecord(std::shared_ptr<Record> record, unsigned int ak);
             virtual bool SelectRecord(std::shared_ptr<Record> record, long long ak);
-            virtual bool SelectRecord(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord);
+            virtual bool SelectRecord(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord, bool isDebug = false);
 
             virtual std::vector<std::shared_ptr<Record>> SelectRecordVec(std::shared_ptr<Record> record, std::shared_ptr<Record> whereRecord);
             virtual bool Update(std::shared_ptr<Record> record, unsigned int ak);
