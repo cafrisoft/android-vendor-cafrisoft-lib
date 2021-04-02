@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Socket/TCP/TCPClientLinux.hpp>
 
 #if (CommOS==CommOS_LINUX || CommOS==CommOS_ANDROID)

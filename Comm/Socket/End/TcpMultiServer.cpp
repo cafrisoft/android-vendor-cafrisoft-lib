@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketTossTcpMultiServer"
 #include <Comm/Socket/End/TcpMultiServer.hpp>
 

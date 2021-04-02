@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Utils/StringTool.hpp>
 #include <Comm/Property/Path.hpp>
 

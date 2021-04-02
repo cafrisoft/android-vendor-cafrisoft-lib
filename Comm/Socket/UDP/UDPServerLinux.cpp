@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "CommSocketUDPServerLinux"
 #include <Comm/Socket/UDP/UDPServerLinux.hpp>
 #include <Comm/Socket/UDP/UDPClientLinux.hpp>

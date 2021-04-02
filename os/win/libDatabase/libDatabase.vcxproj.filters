@@ -98,5 +98,8 @@
     <ClCompile Include="..\..\..\Database\Single\Header.cpp">
       <Filter>Database\Single</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Database\Global\pch.cpp">
+      <Filter>Database\Global</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

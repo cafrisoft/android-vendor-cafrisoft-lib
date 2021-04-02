@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "CommUtilsAndroid"
 #include <Comm/Utils/Android.hpp>
 #include <Comm/OAL/Log.hpp>

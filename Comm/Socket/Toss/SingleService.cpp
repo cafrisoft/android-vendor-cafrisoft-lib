@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketTossSingleService"
 #include <Comm/Socket/Toss/SingleService.hpp>
 #include <Comm/OAL/System.hpp>

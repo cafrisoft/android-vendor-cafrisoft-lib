@@ -1,3 +1,4 @@
+#include <Database/Global/BuildOptions.h>
 #include <Database/Single/Header.hpp>
 #include <Comm/OAL/Log.hpp>
 

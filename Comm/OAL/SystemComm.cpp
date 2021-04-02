@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/System.hpp>
 #include <Comm/Utils/StringTool.hpp>
 

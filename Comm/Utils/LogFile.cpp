@@ -1,4 +1,4 @@
-
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Utils/LogFile.hpp>
 
 namespace Comm {

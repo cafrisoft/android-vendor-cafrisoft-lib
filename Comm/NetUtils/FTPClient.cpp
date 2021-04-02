@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/NetUtils/FTPClient.hpp>
 #include <Comm/NetUtils/FTPClient_libftp.hpp>
 

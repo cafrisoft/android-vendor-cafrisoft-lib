@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/Timer.hpp>
 #include <Comm/OAL/TimerComm.hpp>
 

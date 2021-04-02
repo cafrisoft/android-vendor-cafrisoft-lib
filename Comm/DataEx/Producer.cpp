@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/DataEx/Exchanger.hpp>
 #include <Comm/DataEx/Producer.hpp>
 

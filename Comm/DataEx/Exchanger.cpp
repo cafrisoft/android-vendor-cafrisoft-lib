@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "DataExchanger"
 #include <Comm/DataEx/Exchanger.hpp>
 #include <Comm/DataEx/Producer.hpp>

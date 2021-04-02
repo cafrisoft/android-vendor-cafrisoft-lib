@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Base/Object.hpp>
 #include <Comm/OAL/System.hpp>
 #include <Comm/OAL/DateTime.hpp>

@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Socket/TCP/TCPClientWin.hpp>
 
 #if (CommOS==CommOS_WIN)

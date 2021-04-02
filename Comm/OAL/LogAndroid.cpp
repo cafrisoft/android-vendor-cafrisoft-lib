@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/LogAndroid.hpp>
 
 #if (CommOS==CommOS_ANDROID)

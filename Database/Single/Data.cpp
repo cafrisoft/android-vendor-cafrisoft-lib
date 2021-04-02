@@ -1,3 +1,4 @@
+#include <Database/Global/BuildOptions.h>
 #include <Database/Single/Data.hpp>
 #include <Comm/Utils/StringTool.hpp>
 #include <Comm/OAL/DateTime.hpp>

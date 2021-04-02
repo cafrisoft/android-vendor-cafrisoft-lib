@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Utils/argparse.h>
 #include <Comm/Utils/ArgParser.hpp>
 

@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "CommSocketTCPClient"
 #include <Comm/Socket/TCP/TCPClient.hpp>
 #include <Comm/Socket/TCP/TCPClientWin.hpp>

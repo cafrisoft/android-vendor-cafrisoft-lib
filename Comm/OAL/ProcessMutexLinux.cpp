@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "ProcessMutexLinux"
 #include <Comm/OAL/Log.hpp>
 #include <Comm/OAL/ProcessMutexLinux.hpp>

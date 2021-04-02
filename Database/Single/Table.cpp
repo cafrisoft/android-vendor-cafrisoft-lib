@@ -1,3 +1,4 @@
+#include <Database/Global/BuildOptions.h>
 #define CLOG_TAG "DatabaseSingleTable"
 #include <Database/Single/Table.hpp>
 #include <Database/RDBMS/Base.hpp>

@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Utils/TxtFile.hpp>
 #include <Comm/Utils/StringTool.hpp>
 

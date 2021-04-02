@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Socket/UDP/UDPClientWin.hpp>
 
 #if (CommOS==CommOS_WIN)

@@ -1,4 +1,4 @@
-
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Utils/Counter.hpp>
 #include <Comm/OAL/Lock.hpp>
 

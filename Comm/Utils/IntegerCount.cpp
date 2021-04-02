@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Utils/IntegerCount.hpp>
 #include <Comm/OAL/System.hpp>
 

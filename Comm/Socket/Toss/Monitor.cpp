@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketTossMonitor"
 #include <Comm/Socket/Toss/Monitor.hpp>
 #include <Comm/OAL/System.hpp>

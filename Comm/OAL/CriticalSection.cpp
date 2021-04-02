@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/CriticalSection.hpp>
 #include <Comm/OAL/CriticalSectionWin.hpp>
 #include <Comm/OAL/CriticalSectionLinux.hpp>

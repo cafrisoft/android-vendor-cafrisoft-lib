@@ -91,6 +91,12 @@
     <Filter Include="Comm\Socket\End">
       <UniqueIdentifier>{58830660-5d82-47a9-8505-1a3069c1acc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Comm\Math">
+      <UniqueIdentifier>{68ff33d5-f606-474e-b7d2-3bc7206c02b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comm\Math\Filter">
+      <UniqueIdentifier>{ecbdb342-f471-46ba-956e-8189bfbf6610}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Comm\Global\BuildOptions.h">
@@ -390,6 +396,12 @@
     <ClInclude Include="..\..\..\Comm\Socket\Toss\SingleService.hpp">
       <Filter>Comm\Socket\Toss</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Math\Filter\MvAvg.hpp">
+      <Filter>Comm\Math\Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Comm\Math\Filter\Base.hpp">
+      <Filter>Comm\Math\Filter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Comm\Base\ObjectAPI.cpp">
@@ -655,6 +667,15 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Comm\Socket\Toss\SingleService.cpp">
       <Filter>Comm\Socket\Toss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Math\Filter\MvAvg.cpp">
+      <Filter>Comm\Math\Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Math\Filter\Base.cpp">
+      <Filter>Comm\Math\Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Comm\Global\pch.cpp">
+      <Filter>Comm\Global\AAAAA</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

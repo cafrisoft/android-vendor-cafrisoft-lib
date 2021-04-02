@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "CommSocketUDPServerWin"
 #include <Comm/Socket/UDP/UDPServerWin.hpp>
 #include <Comm/Socket/UDP/UDPClientWin.hpp>

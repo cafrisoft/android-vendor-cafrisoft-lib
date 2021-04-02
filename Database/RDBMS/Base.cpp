@@ -1,3 +1,4 @@
+#include <Database/Global/BuildOptions.h>
 #include <Database/RDBMS/Base.hpp>
 #include <Database/RDBMS/MySQL.hpp>
 #include <Comm/Utils/StringTool.hpp>

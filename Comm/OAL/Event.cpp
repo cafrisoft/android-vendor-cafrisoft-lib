@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/Event.hpp>
 #include <Comm/OAL/EventWin.hpp>
 //#include <Comm/OAL/EventLinux.hpp>

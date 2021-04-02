@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketEndTcpServer"
 #include <Comm/Socket/End/TcpServer.hpp>
 

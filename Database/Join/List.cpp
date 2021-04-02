@@ -1,3 +1,4 @@
+#include <Database/Global/BuildOptions.h>
 #include <Database/Join/List.hpp>
 
 namespace Database {

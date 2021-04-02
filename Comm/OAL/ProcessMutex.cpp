@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/ProcessMutex.hpp>
 #include <Comm/OAL/ProcessMutexWin.hpp>
 #include <Comm/OAL/ProcessMutexLinux.hpp>

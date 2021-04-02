@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "CommStockUDPServer"
 #include <Comm/Socket/UDP/UDPServer.hpp>
 #include <Comm/Socket/UDP/UDPServerWin.hpp>

@@ -1,3 +1,5 @@
+#include <Comm/Global/BuildOptions.h>
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Draw2D/Txt/FreeType.hpp>
 #include <Comm/OAL/Log.hpp>
 

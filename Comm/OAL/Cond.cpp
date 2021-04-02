@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/Cond.hpp>
 #include <Comm/OAL/CondWin.hpp>
 #include <Comm/OAL/CondLinux.hpp>

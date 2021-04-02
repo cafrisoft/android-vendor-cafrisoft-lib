@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "FTPClient_libftp"
 #include <Comm/OAL/HeaderFiles.hpp>
 #include <Comm/NetUtils/FTPClient_libftp.hpp>

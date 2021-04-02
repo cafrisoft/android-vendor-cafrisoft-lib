@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Shell/Main.hpp>
 
 namespace Comm {

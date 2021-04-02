@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "CommSocketTCPServerLinux"
 #include <Comm/Socket/TCP/TCPServerLinux.hpp>
 #include <Comm/Socket/TCP/TCPClientLinux.hpp>

@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketNetPacket"
 #include <Comm/Socket/NetPacket.hpp>
 #include <Comm/Utils/HeaderFiles.hpp>

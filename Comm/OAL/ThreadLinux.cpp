@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/ThreadLinux.hpp>
 
 #if (CommOS==CommOS_LINUX || CommOS==CommOS_ANDROID)

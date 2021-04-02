@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "CommSocketNetPacketFixed"
 #include <Comm/Socket/NetPacketFixed.hpp>
 #include <Comm/Utils/CRC.hpp>

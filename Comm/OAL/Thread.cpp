@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/Thread.hpp>
 #include <Comm/OAL/ThreadWin.hpp>
 #include <Comm/OAL/ThreadLinux.hpp>

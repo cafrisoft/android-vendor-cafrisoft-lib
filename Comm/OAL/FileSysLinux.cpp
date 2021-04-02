@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/FileSys.hpp>
 #include <Comm/Utils/StringTool.hpp>
 #include <Comm/OAL/Log.hpp>

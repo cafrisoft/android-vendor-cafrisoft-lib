@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketTossTcpServer"
 #include <Comm/Socket/Toss/TcpServer.hpp>
 

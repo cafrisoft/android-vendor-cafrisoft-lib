@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketTossUdpClientPost"
 #include <Comm/Socket/Toss/UdpClientPost.hpp>
 

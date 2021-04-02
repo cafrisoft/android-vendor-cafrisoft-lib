@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/OAL/LogWin.hpp>
 #include <Comm/OAL/LogLinux.hpp>
 #include <Comm/OAL/LogAndroid.hpp>

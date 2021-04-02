@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #define CLOG_TAG "SocketTossWorker"
 #include <Comm/Socket/Toss/Worker.hpp>
 

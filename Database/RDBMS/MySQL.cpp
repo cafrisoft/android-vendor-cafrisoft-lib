@@ -1,3 +1,4 @@
+#include <Database/Global/BuildOptions.h>
 #define CLOG_TAG "DatabaseRMDBMSMySQL"
 #include <Database/RDBMS/MySQL.hpp>
 #include <Comm/OAL/Lock.hpp>

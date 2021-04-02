@@ -1,3 +1,4 @@
+#include <Comm/Global/BuildOptions.h>
 #include <Comm/Socket/UDP/UDPClient.hpp>
 #include <Comm/Socket/UDP/UDPClientWin.hpp>
 #include <Comm/Socket/UDP/UDPClientLinux.hpp>
