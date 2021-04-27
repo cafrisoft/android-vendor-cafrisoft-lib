@@ -39,6 +39,8 @@
 #define C_FSEEK64  fseeko
 #define C_FTELL64  ftello
 #define C_ABS64  llabs
+#define C_STRDUP strdup
+#define C_GETPID getpid
 
 #endif
 

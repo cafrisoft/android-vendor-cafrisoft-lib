@@ -39,6 +39,8 @@ This problem is caused when including <windows.h> before <winsock2.h>. Try arran
 #define C_FSEEK64  _fseeki64
 #define C_FTELL64  _ftelli64
 #define C_ABS64  _abs64
+#define C_STRDUP _strdup
+#define C_GETPID _getpid
 
 #endif
 

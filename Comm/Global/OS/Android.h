@@ -34,6 +34,8 @@
 
 #define C_FSEEK64  fseeko
 #define C_FTELL64  ftello
+#define C_STRDUP strdup
+#define C_GETPID getpid
 
 #if (ANDROID_PLATFORM_SDK_VERSION == 28)
 #define ANDROID_MAJOR_VERSION 9
