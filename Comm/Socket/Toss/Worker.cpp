@@ -13,14 +13,11 @@ namespace Comm {
                 _PacketQueue = std::make_shared<Comm::Utils::SyncQueue<std::shared_ptr<Socket::NetPacket>>>();
                 assert(_PacketQueue);
 
-                
-                if (_PacketQueueSecondary > 0) {
 
-                    for (int i = 0; i < _SecondaryQueueCount; i++) {
-                        std::shared_ptr<Comm::Utils::SyncQueue<std::shared_ptr<Comm::Socket::NetPacket>>> q = std::make_shared<Comm::Utils::SyncQueue<std::shared_ptr<Socket::NetPacket>>>();
-                        _PacketQueueSecondary[i] = q;
-                        assert(_PacketQueueSecondary[i]);
-                    }
+                for (int i = 0; i < _SecondaryQueueCount; i++) {
+                    std::shared_ptr<Comm::Utils::SyncQueue<std::shared_ptr<Comm::Socket::NetPacket>>> q = std::make_shared<Comm::Utils::SyncQueue<std::shared_ptr<Socket::NetPacket>>>();
+                    _PacketQueueSecondary[i] = q;
+                    assert(_PacketQueueSecondary[i]);
                 }
 
                 /*
